@@ -1,0 +1,3039 @@
+[
+  {
+    "structure_id": 0,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.532,
+        "dominant_modal_frequency_Hz": 2.66633
+      },
+      {
+        "storey": 1,
+        "height_m": 4.938,
+        "dominant_modal_frequency_Hz": 8.06059
+      },
+      {
+        "storey": 2,
+        "height_m": 4.558,
+        "dominant_modal_frequency_Hz": 4.46783
+      },
+      {
+        "storey": 3,
+        "height_m": 4.434,
+        "dominant_modal_frequency_Hz": 2.66633
+      },
+      {
+        "storey": 4,
+        "height_m": 3.899,
+        "dominant_modal_frequency_Hz": 5.19604
+      },
+      {
+        "storey": 5,
+        "height_m": 3.544,
+        "dominant_modal_frequency_Hz": 0.80764
+      }
+    ]
+  },
+  {
+    "structure_id": 1,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.832,
+        "dominant_modal_frequency_Hz": 7.97649
+      },
+      {
+        "storey": 1,
+        "height_m": 3.46,
+        "dominant_modal_frequency_Hz": 6.93712
+      },
+      {
+        "storey": 2,
+        "height_m": 3.075,
+        "dominant_modal_frequency_Hz": 4.32625
+      },
+      {
+        "storey": 3,
+        "height_m": 4.11,
+        "dominant_modal_frequency_Hz": 4.32625
+      },
+      {
+        "storey": 4,
+        "height_m": 3.742,
+        "dominant_modal_frequency_Hz": 3.15926
+      }
+    ]
+  },
+  {
+    "structure_id": 2,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.4,
+        "dominant_modal_frequency_Hz": 5.26143
+      },
+      {
+        "storey": 1,
+        "height_m": 4.608,
+        "dominant_modal_frequency_Hz": 6.8156
+      },
+      {
+        "storey": 2,
+        "height_m": 4.431,
+        "dominant_modal_frequency_Hz": 5.26143
+      },
+      {
+        "storey": 3,
+        "height_m": 4.478,
+        "dominant_modal_frequency_Hz": 3.2763
+      },
+      {
+        "storey": 4,
+        "height_m": 3.262,
+        "dominant_modal_frequency_Hz": 5.54654
+      },
+      {
+        "storey": 5,
+        "height_m": 3.248,
+        "dominant_modal_frequency_Hz": 4.56664
+      },
+      {
+        "storey": 6,
+        "height_m": 4.855,
+        "dominant_modal_frequency_Hz": 4.56664
+      },
+      {
+        "storey": 7,
+        "height_m": 3.795,
+        "dominant_modal_frequency_Hz": 6.8156
+      }
+    ]
+  },
+  {
+    "structure_id": 3,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.834,
+        "dominant_modal_frequency_Hz": 2.23691
+      },
+      {
+        "storey": 1,
+        "height_m": 3.465,
+        "dominant_modal_frequency_Hz": 7.71556
+      },
+      {
+        "storey": 2,
+        "height_m": 3.735,
+        "dominant_modal_frequency_Hz": 5.43202
+      },
+      {
+        "storey": 3,
+        "height_m": 3.733,
+        "dominant_modal_frequency_Hz": 2.23691
+      },
+      {
+        "storey": 4,
+        "height_m": 3.655,
+        "dominant_modal_frequency_Hz": 7.71556
+      },
+      {
+        "storey": 5,
+        "height_m": 3.759,
+        "dominant_modal_frequency_Hz": 6.79821
+      }
+    ]
+  },
+  {
+    "structure_id": 4,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.296,
+        "dominant_modal_frequency_Hz": 3.6511
+      },
+      {
+        "storey": 1,
+        "height_m": 4.872,
+        "dominant_modal_frequency_Hz": 3.6511
+      },
+      {
+        "storey": 2,
+        "height_m": 3.876,
+        "dominant_modal_frequency_Hz": 2.31551
+      },
+      {
+        "storey": 3,
+        "height_m": 3.767,
+        "dominant_modal_frequency_Hz": 5.02041
+      },
+      {
+        "storey": 4,
+        "height_m": 4.459,
+        "dominant_modal_frequency_Hz": 6.812
+      },
+      {
+        "storey": 5,
+        "height_m": 4.106,
+        "dominant_modal_frequency_Hz": 2.31551
+      },
+      {
+        "storey": 6,
+        "height_m": 4.872,
+        "dominant_modal_frequency_Hz": 8.54553
+      }
+    ]
+  },
+  {
+    "structure_id": 5,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.419,
+        "dominant_modal_frequency_Hz": 5.89276
+      },
+      {
+        "storey": 1,
+        "height_m": 3.346,
+        "dominant_modal_frequency_Hz": 6.52651
+      },
+      {
+        "storey": 2,
+        "height_m": 3.183,
+        "dominant_modal_frequency_Hz": 6.52651
+      },
+      {
+        "storey": 3,
+        "height_m": 3.367,
+        "dominant_modal_frequency_Hz": 1.05643
+      }
+    ]
+  },
+  {
+    "structure_id": 6,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.072,
+        "dominant_modal_frequency_Hz": 3.759
+      },
+      {
+        "storey": 1,
+        "height_m": 3.837,
+        "dominant_modal_frequency_Hz": 5.28646
+      },
+      {
+        "storey": 2,
+        "height_m": 3.948,
+        "dominant_modal_frequency_Hz": 1.16392
+      },
+      {
+        "storey": 3,
+        "height_m": 3.451,
+        "dominant_modal_frequency_Hz": 3.759
+      }
+    ]
+  },
+  {
+    "structure_id": 7,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.654,
+        "dominant_modal_frequency_Hz": 4.55816
+      },
+      {
+        "storey": 1,
+        "height_m": 4.713,
+        "dominant_modal_frequency_Hz": 7.53137
+      },
+      {
+        "storey": 2,
+        "height_m": 3.745,
+        "dominant_modal_frequency_Hz": 2.58698
+      },
+      {
+        "storey": 3,
+        "height_m": 3.307,
+        "dominant_modal_frequency_Hz": 2.58698
+      },
+      {
+        "storey": 4,
+        "height_m": 4.202,
+        "dominant_modal_frequency_Hz": 2.58698
+      }
+    ]
+  },
+  {
+    "structure_id": 8,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.526,
+        "dominant_modal_frequency_Hz": 2.64524
+      },
+      {
+        "storey": 1,
+        "height_m": 3.116,
+        "dominant_modal_frequency_Hz": 0.8192
+      },
+      {
+        "storey": 2,
+        "height_m": 3.733,
+        "dominant_modal_frequency_Hz": 2.64524
+      },
+      {
+        "storey": 3,
+        "height_m": 4.079,
+        "dominant_modal_frequency_Hz": 7.46628
+      },
+      {
+        "storey": 4,
+        "height_m": 3.677,
+        "dominant_modal_frequency_Hz": 6.71161
+      },
+      {
+        "storey": 5,
+        "height_m": 4.689,
+        "dominant_modal_frequency_Hz": 7.46628
+      }
+    ]
+  },
+  {
+    "structure_id": 9,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.745,
+        "dominant_modal_frequency_Hz": 7.40123
+      },
+      {
+        "storey": 1,
+        "height_m": 3.097,
+        "dominant_modal_frequency_Hz": 2.15793
+      },
+      {
+        "storey": 2,
+        "height_m": 3.219,
+        "dominant_modal_frequency_Hz": 7.40123
+      },
+      {
+        "storey": 3,
+        "height_m": 4.351,
+        "dominant_modal_frequency_Hz": 3.11064
+      },
+      {
+        "storey": 4,
+        "height_m": 4.427,
+        "dominant_modal_frequency_Hz": 3.11064
+      },
+      {
+        "storey": 5,
+        "height_m": 4.547,
+        "dominant_modal_frequency_Hz": 6.52137
+      },
+      {
+        "storey": 6,
+        "height_m": 4.731,
+        "dominant_modal_frequency_Hz": 5.5229
+      },
+      {
+        "storey": 7,
+        "height_m": 4.479,
+        "dominant_modal_frequency_Hz": 7.40123
+      }
+    ]
+  },
+  {
+    "structure_id": 10,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.223,
+        "dominant_modal_frequency_Hz": 6.7891
+      },
+      {
+        "storey": 1,
+        "height_m": 3.769,
+        "dominant_modal_frequency_Hz": 0.75396
+      },
+      {
+        "storey": 2,
+        "height_m": 3.121,
+        "dominant_modal_frequency_Hz": 3.5727
+      },
+      {
+        "storey": 3,
+        "height_m": 4.396,
+        "dominant_modal_frequency_Hz": 3.5727
+      },
+      {
+        "storey": 4,
+        "height_m": 3.414,
+        "dominant_modal_frequency_Hz": 3.5727
+      },
+      {
+        "storey": 5,
+        "height_m": 3.604,
+        "dominant_modal_frequency_Hz": 3.5727
+      },
+      {
+        "storey": 6,
+        "height_m": 3.788,
+        "dominant_modal_frequency_Hz": 4.34098
+      }
+    ]
+  },
+  {
+    "structure_id": 11,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.008,
+        "dominant_modal_frequency_Hz": 0.70983
+      },
+      {
+        "storey": 1,
+        "height_m": 3.033,
+        "dominant_modal_frequency_Hz": 0.70983
+      },
+      {
+        "storey": 2,
+        "height_m": 4.986,
+        "dominant_modal_frequency_Hz": 7.34707
+      },
+      {
+        "storey": 3,
+        "height_m": 4.169,
+        "dominant_modal_frequency_Hz": 7.34707
+      },
+      {
+        "storey": 4,
+        "height_m": 3.254,
+        "dominant_modal_frequency_Hz": 3.79174
+      },
+      {
+        "storey": 5,
+        "height_m": 4.795,
+        "dominant_modal_frequency_Hz": 0.70983
+      },
+      {
+        "storey": 6,
+        "height_m": 4.761,
+        "dominant_modal_frequency_Hz": 3.79174
+      }
+    ]
+  },
+  {
+    "structure_id": 12,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.754,
+        "dominant_modal_frequency_Hz": 5.44714
+      },
+      {
+        "storey": 1,
+        "height_m": 3.788,
+        "dominant_modal_frequency_Hz": 7.60527
+      },
+      {
+        "storey": 2,
+        "height_m": 3.262,
+        "dominant_modal_frequency_Hz": 4.40348
+      },
+      {
+        "storey": 3,
+        "height_m": 3.326,
+        "dominant_modal_frequency_Hz": 7.60527
+      },
+      {
+        "storey": 4,
+        "height_m": 4.369,
+        "dominant_modal_frequency_Hz": 3.11791
+      }
+    ]
+  },
+  {
+    "structure_id": 13,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.52,
+        "dominant_modal_frequency_Hz": 5.32787
+      },
+      {
+        "storey": 1,
+        "height_m": 4.545,
+        "dominant_modal_frequency_Hz": 0.90683
+      },
+      {
+        "storey": 2,
+        "height_m": 3.414,
+        "dominant_modal_frequency_Hz": 0.90683
+      },
+      {
+        "storey": 3,
+        "height_m": 4.883,
+        "dominant_modal_frequency_Hz": 4.12139
+      },
+      {
+        "storey": 4,
+        "height_m": 3.241,
+        "dominant_modal_frequency_Hz": 6.91053
+      },
+      {
+        "storey": 5,
+        "height_m": 4.792,
+        "dominant_modal_frequency_Hz": 6.91053
+      }
+    ]
+  },
+  {
+    "structure_id": 14,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.245,
+        "dominant_modal_frequency_Hz": 5.29123
+      },
+      {
+        "storey": 1,
+        "height_m": 4.502,
+        "dominant_modal_frequency_Hz": 7.08975
+      },
+      {
+        "storey": 2,
+        "height_m": 4.587,
+        "dominant_modal_frequency_Hz": 1.19495
+      },
+      {
+        "storey": 3,
+        "height_m": 3.424,
+        "dominant_modal_frequency_Hz": 3.29843
+      }
+    ]
+  },
+  {
+    "structure_id": 15,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.733,
+        "dominant_modal_frequency_Hz": 4.51106
+      },
+      {
+        "storey": 1,
+        "height_m": 4.477,
+        "dominant_modal_frequency_Hz": 5.69443
+      },
+      {
+        "storey": 2,
+        "height_m": 3.806,
+        "dominant_modal_frequency_Hz": 2.7517
+      },
+      {
+        "storey": 3,
+        "height_m": 4.124,
+        "dominant_modal_frequency_Hz": 7.06706
+      },
+      {
+        "storey": 4,
+        "height_m": 4.44,
+        "dominant_modal_frequency_Hz": 2.7517
+      },
+      {
+        "storey": 5,
+        "height_m": 4.018,
+        "dominant_modal_frequency_Hz": 4.51106
+      }
+    ]
+  },
+  {
+    "structure_id": 16,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.49,
+        "dominant_modal_frequency_Hz": 3.33613
+      },
+      {
+        "storey": 1,
+        "height_m": 4.529,
+        "dominant_modal_frequency_Hz": 6.93811
+      },
+      {
+        "storey": 2,
+        "height_m": 4.525,
+        "dominant_modal_frequency_Hz": 6.93811
+      },
+      {
+        "storey": 3,
+        "height_m": 3.961,
+        "dominant_modal_frequency_Hz": 5.53443
+      },
+      {
+        "storey": 4,
+        "height_m": 3.913,
+        "dominant_modal_frequency_Hz": 5.53443
+      }
+    ]
+  },
+  {
+    "structure_id": 17,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.033,
+        "dominant_modal_frequency_Hz": 3.31157
+      },
+      {
+        "storey": 1,
+        "height_m": 3.19,
+        "dominant_modal_frequency_Hz": 1.13153
+      },
+      {
+        "storey": 2,
+        "height_m": 4.456,
+        "dominant_modal_frequency_Hz": 7.49247
+      },
+      {
+        "storey": 3,
+        "height_m": 4.953,
+        "dominant_modal_frequency_Hz": 5.65279
+      },
+      {
+        "storey": 4,
+        "height_m": 3.637,
+        "dominant_modal_frequency_Hz": 7.49247
+      }
+    ]
+  },
+  {
+    "structure_id": 18,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.503,
+        "dominant_modal_frequency_Hz": 0.85446
+      },
+      {
+        "storey": 1,
+        "height_m": 3.238,
+        "dominant_modal_frequency_Hz": 2.27348
+      },
+      {
+        "storey": 2,
+        "height_m": 3.172,
+        "dominant_modal_frequency_Hz": 5.03761
+      },
+      {
+        "storey": 3,
+        "height_m": 3.353,
+        "dominant_modal_frequency_Hz": 2.27348
+      },
+      {
+        "storey": 4,
+        "height_m": 3.351,
+        "dominant_modal_frequency_Hz": 5.78448
+      },
+      {
+        "storey": 5,
+        "height_m": 4.646,
+        "dominant_modal_frequency_Hz": 2.27348
+      },
+      {
+        "storey": 6,
+        "height_m": 3.797,
+        "dominant_modal_frequency_Hz": 0.85446
+      }
+    ]
+  },
+  {
+    "structure_id": 19,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.244,
+        "dominant_modal_frequency_Hz": 6.56483
+      },
+      {
+        "storey": 1,
+        "height_m": 4.705,
+        "dominant_modal_frequency_Hz": 6.53636
+      },
+      {
+        "storey": 2,
+        "height_m": 4.509,
+        "dominant_modal_frequency_Hz": 2.85059
+      },
+      {
+        "storey": 3,
+        "height_m": 4.64,
+        "dominant_modal_frequency_Hz": 6.53636
+      },
+      {
+        "storey": 4,
+        "height_m": 4.052,
+        "dominant_modal_frequency_Hz": 2.85059
+      }
+    ]
+  },
+  {
+    "structure_id": 20,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.778,
+        "dominant_modal_frequency_Hz": 3.39074
+      },
+      {
+        "storey": 1,
+        "height_m": 3.429,
+        "dominant_modal_frequency_Hz": 1.22841
+      },
+      {
+        "storey": 2,
+        "height_m": 4.125,
+        "dominant_modal_frequency_Hz": 1.22841
+      },
+      {
+        "storey": 3,
+        "height_m": 4.511,
+        "dominant_modal_frequency_Hz": 3.39074
+      }
+    ]
+  },
+  {
+    "structure_id": 21,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.375,
+        "dominant_modal_frequency_Hz": 2.86933
+      },
+      {
+        "storey": 1,
+        "height_m": 4.189,
+        "dominant_modal_frequency_Hz": 5.80255
+      },
+      {
+        "storey": 2,
+        "height_m": 4.756,
+        "dominant_modal_frequency_Hz": 3.87706
+      },
+      {
+        "storey": 3,
+        "height_m": 3.749,
+        "dominant_modal_frequency_Hz": 1.02246
+      },
+      {
+        "storey": 4,
+        "height_m": 3.202,
+        "dominant_modal_frequency_Hz": 6.63621
+      },
+      {
+        "storey": 5,
+        "height_m": 4.622,
+        "dominant_modal_frequency_Hz": 6.63621
+      }
+    ]
+  },
+  {
+    "structure_id": 22,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.135,
+        "dominant_modal_frequency_Hz": 2.12715
+      },
+      {
+        "storey": 1,
+        "height_m": 3.794,
+        "dominant_modal_frequency_Hz": 4.02822
+      },
+      {
+        "storey": 2,
+        "height_m": 3.89,
+        "dominant_modal_frequency_Hz": 2.12715
+      },
+      {
+        "storey": 3,
+        "height_m": 3.126,
+        "dominant_modal_frequency_Hz": 2.12715
+      },
+      {
+        "storey": 4,
+        "height_m": 4.938,
+        "dominant_modal_frequency_Hz": 0.75614
+      },
+      {
+        "storey": 5,
+        "height_m": 3.621,
+        "dominant_modal_frequency_Hz": 6.4061
+      },
+      {
+        "storey": 6,
+        "height_m": 3.379,
+        "dominant_modal_frequency_Hz": 4.02822
+      }
+    ]
+  },
+  {
+    "structure_id": 23,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.873,
+        "dominant_modal_frequency_Hz": 3.67692
+      },
+      {
+        "storey": 1,
+        "height_m": 3.376,
+        "dominant_modal_frequency_Hz": 3.67692
+      },
+      {
+        "storey": 2,
+        "height_m": 3.215,
+        "dominant_modal_frequency_Hz": 1.25124
+      },
+      {
+        "storey": 3,
+        "height_m": 3.995,
+        "dominant_modal_frequency_Hz": 5.35624
+      }
+    ]
+  },
+  {
+    "structure_id": 24,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.473,
+        "dominant_modal_frequency_Hz": 2.26896
+      },
+      {
+        "storey": 1,
+        "height_m": 3.919,
+        "dominant_modal_frequency_Hz": 5.28078
+      },
+      {
+        "storey": 2,
+        "height_m": 3.431,
+        "dominant_modal_frequency_Hz": 5.28078
+      },
+      {
+        "storey": 3,
+        "height_m": 4.49,
+        "dominant_modal_frequency_Hz": 2.26896
+      },
+      {
+        "storey": 4,
+        "height_m": 3.262,
+        "dominant_modal_frequency_Hz": 7.80887
+      },
+      {
+        "storey": 5,
+        "height_m": 3.397,
+        "dominant_modal_frequency_Hz": 6.54779
+      }
+    ]
+  },
+  {
+    "structure_id": 25,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.136,
+        "dominant_modal_frequency_Hz": 4.14333
+      },
+      {
+        "storey": 1,
+        "height_m": 4.104,
+        "dominant_modal_frequency_Hz": 1.90896
+      },
+      {
+        "storey": 2,
+        "height_m": 4.673,
+        "dominant_modal_frequency_Hz": 6.36791
+      },
+      {
+        "storey": 3,
+        "height_m": 3.217,
+        "dominant_modal_frequency_Hz": 5.99701
+      },
+      {
+        "storey": 4,
+        "height_m": 3.45,
+        "dominant_modal_frequency_Hz": 5.99701
+      },
+      {
+        "storey": 5,
+        "height_m": 4.586,
+        "dominant_modal_frequency_Hz": 4.14333
+      },
+      {
+        "storey": 6,
+        "height_m": 4.696,
+        "dominant_modal_frequency_Hz": 6.36791
+      },
+      {
+        "storey": 7,
+        "height_m": 4.99,
+        "dominant_modal_frequency_Hz": 0.69701
+      }
+    ]
+  },
+  {
+    "structure_id": 26,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.279,
+        "dominant_modal_frequency_Hz": 0.87431
+      },
+      {
+        "storey": 1,
+        "height_m": 4.566,
+        "dominant_modal_frequency_Hz": 0.87431
+      },
+      {
+        "storey": 2,
+        "height_m": 3.422,
+        "dominant_modal_frequency_Hz": 3.25724
+      },
+      {
+        "storey": 3,
+        "height_m": 4.835,
+        "dominant_modal_frequency_Hz": 3.25724
+      },
+      {
+        "storey": 4,
+        "height_m": 4.702,
+        "dominant_modal_frequency_Hz": 0.87431
+      }
+    ]
+  },
+  {
+    "structure_id": 27,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.751,
+        "dominant_modal_frequency_Hz": 5.03922
+      },
+      {
+        "storey": 1,
+        "height_m": 3.568,
+        "dominant_modal_frequency_Hz": 2.9404
+      },
+      {
+        "storey": 2,
+        "height_m": 4.576,
+        "dominant_modal_frequency_Hz": 7.22856
+      },
+      {
+        "storey": 3,
+        "height_m": 3.766,
+        "dominant_modal_frequency_Hz": 4.60761
+      },
+      {
+        "storey": 4,
+        "height_m": 4.96,
+        "dominant_modal_frequency_Hz": 1.03565
+      }
+    ]
+  },
+  {
+    "structure_id": 28,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.844,
+        "dominant_modal_frequency_Hz": 4.69418
+      },
+      {
+        "storey": 1,
+        "height_m": 3.664,
+        "dominant_modal_frequency_Hz": 5.93695
+      },
+      {
+        "storey": 2,
+        "height_m": 3.338,
+        "dominant_modal_frequency_Hz": 2.42703
+      },
+      {
+        "storey": 3,
+        "height_m": 3.424,
+        "dominant_modal_frequency_Hz": 7.37444
+      },
+      {
+        "storey": 4,
+        "height_m": 3.18,
+        "dominant_modal_frequency_Hz": 7.37444
+      },
+      {
+        "storey": 5,
+        "height_m": 3.24,
+        "dominant_modal_frequency_Hz": 5.93695
+      },
+      {
+        "storey": 6,
+        "height_m": 3.143,
+        "dominant_modal_frequency_Hz": 2.42703
+      }
+    ]
+  },
+  {
+    "structure_id": 29,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.14,
+        "dominant_modal_frequency_Hz": 5.82845
+      },
+      {
+        "storey": 1,
+        "height_m": 3.309,
+        "dominant_modal_frequency_Hz": 0.60027
+      },
+      {
+        "storey": 2,
+        "height_m": 4.882,
+        "dominant_modal_frequency_Hz": 5.06156
+      },
+      {
+        "storey": 3,
+        "height_m": 3.335,
+        "dominant_modal_frequency_Hz": 3.16187
+      },
+      {
+        "storey": 4,
+        "height_m": 4.253,
+        "dominant_modal_frequency_Hz": 1.64321
+      },
+      {
+        "storey": 5,
+        "height_m": 3.652,
+        "dominant_modal_frequency_Hz": 5.82845
+      },
+      {
+        "storey": 6,
+        "height_m": 4.283,
+        "dominant_modal_frequency_Hz": 3.16187
+      },
+      {
+        "storey": 7,
+        "height_m": 3.825,
+        "dominant_modal_frequency_Hz": 6.22538
+      }
+    ]
+  },
+  {
+    "structure_id": 30,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.206,
+        "dominant_modal_frequency_Hz": 2.27281
+      },
+      {
+        "storey": 1,
+        "height_m": 3.95,
+        "dominant_modal_frequency_Hz": 6.8125
+      },
+      {
+        "storey": 2,
+        "height_m": 4.207,
+        "dominant_modal_frequency_Hz": 6.8125
+      },
+      {
+        "storey": 3,
+        "height_m": 3.491,
+        "dominant_modal_frequency_Hz": 7.58033
+      },
+      {
+        "storey": 4,
+        "height_m": 3.085,
+        "dominant_modal_frequency_Hz": 3.66812
+      },
+      {
+        "storey": 5,
+        "height_m": 3.447,
+        "dominant_modal_frequency_Hz": 6.8125
+      },
+      {
+        "storey": 6,
+        "height_m": 3.91,
+        "dominant_modal_frequency_Hz": 5.12236
+      }
+    ]
+  },
+  {
+    "structure_id": 31,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.283,
+        "dominant_modal_frequency_Hz": 7.303
+      },
+      {
+        "storey": 1,
+        "height_m": 3.305,
+        "dominant_modal_frequency_Hz": 5.27874
+      },
+      {
+        "storey": 2,
+        "height_m": 4.375,
+        "dominant_modal_frequency_Hz": 1.22605
+      },
+      {
+        "storey": 3,
+        "height_m": 3.095,
+        "dominant_modal_frequency_Hz": 5.27874
+      }
+    ]
+  },
+  {
+    "structure_id": 32,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.094,
+        "dominant_modal_frequency_Hz": 7.05275
+      },
+      {
+        "storey": 1,
+        "height_m": 3.293,
+        "dominant_modal_frequency_Hz": 2.3611
+      },
+      {
+        "storey": 2,
+        "height_m": 3.673,
+        "dominant_modal_frequency_Hz": 6.29015
+      },
+      {
+        "storey": 3,
+        "height_m": 4.975,
+        "dominant_modal_frequency_Hz": 0.65569
+      },
+      {
+        "storey": 4,
+        "height_m": 3.032,
+        "dominant_modal_frequency_Hz": 4.76533
+      },
+      {
+        "storey": 5,
+        "height_m": 3.905,
+        "dominant_modal_frequency_Hz": 4.76533
+      },
+      {
+        "storey": 6,
+        "height_m": 4.685,
+        "dominant_modal_frequency_Hz": 7.05275
+      },
+      {
+        "storey": 7,
+        "height_m": 3.648,
+        "dominant_modal_frequency_Hz": 6.29015
+      }
+    ]
+  },
+  {
+    "structure_id": 33,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.869,
+        "dominant_modal_frequency_Hz": 6.96934
+      },
+      {
+        "storey": 1,
+        "height_m": 4.534,
+        "dominant_modal_frequency_Hz": 6.96934
+      },
+      {
+        "storey": 2,
+        "height_m": 4.613,
+        "dominant_modal_frequency_Hz": 4.94834
+      },
+      {
+        "storey": 3,
+        "height_m": 3.617,
+        "dominant_modal_frequency_Hz": 3.34143
+      },
+      {
+        "storey": 4,
+        "height_m": 4.858,
+        "dominant_modal_frequency_Hz": 5.67283
+      }
+    ]
+  },
+  {
+    "structure_id": 34,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.636,
+        "dominant_modal_frequency_Hz": 7.47299
+      },
+      {
+        "storey": 1,
+        "height_m": 4.168,
+        "dominant_modal_frequency_Hz": 1.06429
+      },
+      {
+        "storey": 2,
+        "height_m": 3.527,
+        "dominant_modal_frequency_Hz": 1.06429
+      },
+      {
+        "storey": 3,
+        "height_m": 4.859,
+        "dominant_modal_frequency_Hz": 5.86838
+      },
+      {
+        "storey": 4,
+        "height_m": 3.23,
+        "dominant_modal_frequency_Hz": 2.86739
+      }
+    ]
+  },
+  {
+    "structure_id": 35,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.497,
+        "dominant_modal_frequency_Hz": 3.12674
+      },
+      {
+        "storey": 1,
+        "height_m": 4.753,
+        "dominant_modal_frequency_Hz": 7.3567
+      },
+      {
+        "storey": 2,
+        "height_m": 3.273,
+        "dominant_modal_frequency_Hz": 1.16138
+      },
+      {
+        "storey": 3,
+        "height_m": 3.64,
+        "dominant_modal_frequency_Hz": 7.3567
+      },
+      {
+        "storey": 4,
+        "height_m": 3.737,
+        "dominant_modal_frequency_Hz": 7.3567
+      }
+    ]
+  },
+  {
+    "structure_id": 36,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.433,
+        "dominant_modal_frequency_Hz": 6.30422
+      },
+      {
+        "storey": 1,
+        "height_m": 4.721,
+        "dominant_modal_frequency_Hz": 3.18938
+      },
+      {
+        "storey": 2,
+        "height_m": 4.297,
+        "dominant_modal_frequency_Hz": 6.30422
+      },
+      {
+        "storey": 3,
+        "height_m": 3.84,
+        "dominant_modal_frequency_Hz": 6.30422
+      }
+    ]
+  },
+  {
+    "structure_id": 37,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.769,
+        "dominant_modal_frequency_Hz": 6.57136
+      },
+      {
+        "storey": 1,
+        "height_m": 3.361,
+        "dominant_modal_frequency_Hz": 4.39089
+      },
+      {
+        "storey": 2,
+        "height_m": 3.704,
+        "dominant_modal_frequency_Hz": 1.04398
+      },
+      {
+        "storey": 3,
+        "height_m": 3.575,
+        "dominant_modal_frequency_Hz": 4.39089
+      },
+      {
+        "storey": 4,
+        "height_m": 3.349,
+        "dominant_modal_frequency_Hz": 6.84392
+      }
+    ]
+  },
+  {
+    "structure_id": 38,
+    "n_storeys": 7,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.103,
+        "dominant_modal_frequency_Hz": 2.41076
+      },
+      {
+        "storey": 1,
+        "height_m": 3.955,
+        "dominant_modal_frequency_Hz": 7.11394
+      },
+      {
+        "storey": 2,
+        "height_m": 4.773,
+        "dominant_modal_frequency_Hz": 5.70986
+      },
+      {
+        "storey": 3,
+        "height_m": 4.33,
+        "dominant_modal_frequency_Hz": 3.76948
+      },
+      {
+        "storey": 4,
+        "height_m": 4.37,
+        "dominant_modal_frequency_Hz": 3.76948
+      },
+      {
+        "storey": 5,
+        "height_m": 3.527,
+        "dominant_modal_frequency_Hz": 7.11394
+      },
+      {
+        "storey": 6,
+        "height_m": 3.837,
+        "dominant_modal_frequency_Hz": 6.99454
+      }
+    ]
+  },
+  {
+    "structure_id": 39,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.645,
+        "dominant_modal_frequency_Hz": 6.3547
+      },
+      {
+        "storey": 1,
+        "height_m": 4.395,
+        "dominant_modal_frequency_Hz": 1.35556
+      },
+      {
+        "storey": 2,
+        "height_m": 4.914,
+        "dominant_modal_frequency_Hz": 5.6244
+      },
+      {
+        "storey": 3,
+        "height_m": 4.175,
+        "dominant_modal_frequency_Hz": 5.6244
+      }
+    ]
+  },
+  {
+    "structure_id": 40,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.101,
+        "dominant_modal_frequency_Hz": 7.02248
+      },
+      {
+        "storey": 1,
+        "height_m": 3.286,
+        "dominant_modal_frequency_Hz": 3.25615
+      },
+      {
+        "storey": 2,
+        "height_m": 3.386,
+        "dominant_modal_frequency_Hz": 5.03714
+      },
+      {
+        "storey": 3,
+        "height_m": 3.747,
+        "dominant_modal_frequency_Hz": 5.03714
+      },
+      {
+        "storey": 4,
+        "height_m": 4.888,
+        "dominant_modal_frequency_Hz": 5.9842
+      },
+      {
+        "storey": 5,
+        "height_m": 4.01,
+        "dominant_modal_frequency_Hz": 1.89737
+      },
+      {
+        "storey": 6,
+        "height_m": 3.47,
+        "dominant_modal_frequency_Hz": 1.89737
+      },
+      {
+        "storey": 7,
+        "height_m": 3.212,
+        "dominant_modal_frequency_Hz": 3.25615
+      }
+    ]
+  },
+  {
+    "structure_id": 41,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.393,
+        "dominant_modal_frequency_Hz": 4.25294
+      },
+      {
+        "storey": 1,
+        "height_m": 4.718,
+        "dominant_modal_frequency_Hz": 6.87428
+      },
+      {
+        "storey": 2,
+        "height_m": 3.245,
+        "dominant_modal_frequency_Hz": 7.18647
+      },
+      {
+        "storey": 3,
+        "height_m": 4.852,
+        "dominant_modal_frequency_Hz": 0.69612
+      },
+      {
+        "storey": 4,
+        "height_m": 3.052,
+        "dominant_modal_frequency_Hz": 6.18054
+      },
+      {
+        "storey": 5,
+        "height_m": 4.672,
+        "dominant_modal_frequency_Hz": 7.94126
+      },
+      {
+        "storey": 6,
+        "height_m": 3.153,
+        "dominant_modal_frequency_Hz": 6.87428
+      },
+      {
+        "storey": 7,
+        "height_m": 3.389,
+        "dominant_modal_frequency_Hz": 2.05357
+      }
+    ]
+  },
+  {
+    "structure_id": 42,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.612,
+        "dominant_modal_frequency_Hz": 1.12046
+      },
+      {
+        "storey": 1,
+        "height_m": 4.79,
+        "dominant_modal_frequency_Hz": 3.8131
+      },
+      {
+        "storey": 2,
+        "height_m": 3.14,
+        "dominant_modal_frequency_Hz": 1.12046
+      },
+      {
+        "storey": 3,
+        "height_m": 4.15,
+        "dominant_modal_frequency_Hz": 1.12046
+      }
+    ]
+  },
+  {
+    "structure_id": 43,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.776,
+        "dominant_modal_frequency_Hz": 5.45148
+      },
+      {
+        "storey": 1,
+        "height_m": 4.625,
+        "dominant_modal_frequency_Hz": 2.80264
+      },
+      {
+        "storey": 2,
+        "height_m": 4.419,
+        "dominant_modal_frequency_Hz": 5.45148
+      },
+      {
+        "storey": 3,
+        "height_m": 3.937,
+        "dominant_modal_frequency_Hz": 7.4961
+      },
+      {
+        "storey": 4,
+        "height_m": 4.785,
+        "dominant_modal_frequency_Hz": 2.80264
+      },
+      {
+        "storey": 5,
+        "height_m": 3.46,
+        "dominant_modal_frequency_Hz": 4.93404
+      }
+    ]
+  },
+  {
+    "structure_id": 44,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.632,
+        "dominant_modal_frequency_Hz": 0.72341
+      },
+      {
+        "storey": 1,
+        "height_m": 3.145,
+        "dominant_modal_frequency_Hz": 5.51131
+      },
+      {
+        "storey": 2,
+        "height_m": 4.89,
+        "dominant_modal_frequency_Hz": 7.47635
+      },
+      {
+        "storey": 3,
+        "height_m": 3.891,
+        "dominant_modal_frequency_Hz": 2.66649
+      },
+      {
+        "storey": 4,
+        "height_m": 4.351,
+        "dominant_modal_frequency_Hz": 2.66649
+      },
+      {
+        "storey": 5,
+        "height_m": 4.682,
+        "dominant_modal_frequency_Hz": 3.84694
+      }
+    ]
+  },
+  {
+    "structure_id": 45,
+    "n_storeys": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.108,
+        "dominant_modal_frequency_Hz": 2.95057
+      },
+      {
+        "storey": 1,
+        "height_m": 4.912,
+        "dominant_modal_frequency_Hz": 2.95057
+      },
+      {
+        "storey": 2,
+        "height_m": 4.962,
+        "dominant_modal_frequency_Hz": 2.95057
+      },
+      {
+        "storey": 3,
+        "height_m": 4.478,
+        "dominant_modal_frequency_Hz": 1.01892
+      },
+      {
+        "storey": 4,
+        "height_m": 3.93,
+        "dominant_modal_frequency_Hz": 2.95057
+      }
+    ]
+  },
+  {
+    "structure_id": 46,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.499,
+        "dominant_modal_frequency_Hz": 6.11843
+      },
+      {
+        "storey": 1,
+        "height_m": 3.237,
+        "dominant_modal_frequency_Hz": 7.17074
+      },
+      {
+        "storey": 2,
+        "height_m": 3.434,
+        "dominant_modal_frequency_Hz": 6.11843
+      },
+      {
+        "storey": 3,
+        "height_m": 3.549,
+        "dominant_modal_frequency_Hz": 6.85689
+      },
+      {
+        "storey": 4,
+        "height_m": 3.803,
+        "dominant_modal_frequency_Hz": 6.85689
+      },
+      {
+        "storey": 5,
+        "height_m": 4.058,
+        "dominant_modal_frequency_Hz": 7.17074
+      },
+      {
+        "storey": 6,
+        "height_m": 3.002,
+        "dominant_modal_frequency_Hz": 4.49574
+      },
+      {
+        "storey": 7,
+        "height_m": 3.324,
+        "dominant_modal_frequency_Hz": 2.0315
+      }
+    ]
+  },
+  {
+    "structure_id": 47,
+    "n_storeys": 6,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.641,
+        "dominant_modal_frequency_Hz": 0.93296
+      },
+      {
+        "storey": 1,
+        "height_m": 3.567,
+        "dominant_modal_frequency_Hz": 0.93296
+      },
+      {
+        "storey": 2,
+        "height_m": 4.148,
+        "dominant_modal_frequency_Hz": 7.49495
+      },
+      {
+        "storey": 3,
+        "height_m": 3.367,
+        "dominant_modal_frequency_Hz": 5.11929
+      },
+      {
+        "storey": 4,
+        "height_m": 3.938,
+        "dominant_modal_frequency_Hz": 0.93296
+      },
+      {
+        "storey": 5,
+        "height_m": 4.302,
+        "dominant_modal_frequency_Hz": 0.93296
+      }
+    ]
+  },
+  {
+    "structure_id": 48,
+    "n_storeys": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 4.58,
+        "dominant_modal_frequency_Hz": 1.98657
+      },
+      {
+        "storey": 1,
+        "height_m": 3.129,
+        "dominant_modal_frequency_Hz": 7.75444
+      },
+      {
+        "storey": 2,
+        "height_m": 3.508,
+        "dominant_modal_frequency_Hz": 4.28117
+      },
+      {
+        "storey": 3,
+        "height_m": 3.46,
+        "dominant_modal_frequency_Hz": 5.50082
+      },
+      {
+        "storey": 4,
+        "height_m": 4.971,
+        "dominant_modal_frequency_Hz": 0.72382
+      },
+      {
+        "storey": 5,
+        "height_m": 4.412,
+        "dominant_modal_frequency_Hz": 1.98657
+      },
+      {
+        "storey": 6,
+        "height_m": 4.236,
+        "dominant_modal_frequency_Hz": 1.98657
+      },
+      {
+        "storey": 7,
+        "height_m": 3.01,
+        "dominant_modal_frequency_Hz": 0.72382
+      }
+    ]
+  },
+  {
+    "structure_id": 49,
+    "n_storeys": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "height_m",
+      "dominant_modal_frequency_Hz"
+    ],
+    "node_features": [
+      {
+        "storey": 0,
+        "height_m": 3.386,
+        "dominant_modal_frequency_Hz": 6.61031
+      },
+      {
+        "storey": 1,
+        "height_m": 4.083,
+        "dominant_modal_frequency_Hz": 6.61031
+      },
+      {
+        "storey": 2,
+        "height_m": 3.258,
+        "dominant_modal_frequency_Hz": 3.29906
+      },
+      {
+        "storey": 3,
+        "height_m": 4.378,
+        "dominant_modal_frequency_Hz": 3.29906
+      }
+    ]
+  }
+]

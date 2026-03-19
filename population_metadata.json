@@ -1,5 +1,5 @@
 {
-  "description": "Population of 50 shear-frame structures with VARIABLE number of storeys (4\u20138). Each structure is a small graph: nodes = storeys, edges = inter-storey connections. Structures vary in geometry \u2014 feature matrices differ in size across structures. The population graph connects structurally similar structures.",
+  "description": "Population of 50 shear-frame structures with 4-8 storeys. The candidate-facing data exposes graph topology and lightweight measurement-like modal features, while latent simulator parameters remain hidden.",
   "n_structures": 50,
   "n_damaged": 15,
   "n_healthy": 35,
@@ -7,48 +7,22 @@
     4,
     8
   ],
-  "storey_distribution": {
-    "4": 11,
-    "5": 7,
-    "6": 15,
-    "7": 9,
-    "8": 8
-  },
   "population_graph_k": 5,
   "random_seed": 42,
-  "files": {
-    "structures.json": "List of 50 structure objects. Each has: structure_id, n_storeys, damaged (0/1), damage_storey (null if healthy), node_features (list of dicts, one per storey), edges (list of [src, dst] pairs), feature_names.",
-    "population_edges.csv": "Population-level similarity graph. Columns: source, target.",
-    "population_edge_weights.csv": "Same with cosine_similarity weight column."
+  "candidate_input_files": {
+    "structures_measurements.json": "Topology and node-level measurement-like features.",
+    "structure_labels.csv": "Structure-level label and true damage location for evaluation.",
+    "population_edges_geometry.csv": "Starter population graph based on geometry-only summaries.",
+    "population_edge_weights_geometry.csv": "Weighted version of the starter graph."
   },
   "node_feature_descriptions": {
-    "mass_kg": "Storey mass [kg]",
-    "stiffness_Nm": "Inter-storey stiffness [N/m] \u2014 reduced if this storey is damaged",
-    "height_m": "Storey height [m]",
-    "nat_freq_Hz": "Natural frequency of the dominant mode for this storey [Hz] (noisy)",
-    "mac": "MAC value of that mode vs. undamaged reference [-]"
+    "height_m": "Storey height [m].",
+    "dominant_modal_frequency_Hz": "Noisy dominant modal frequency assigned to the storey via the largest noisy mode-shape amplitude."
   },
-  "population_summary_features_used_for_edges": [
-    "n_storeys",
-    "mean(mass)",
-    "std(mass)",
-    "mean(stiffness)",
-    "std(stiffness)",
-    "fundamental_frequency",
-    "mean_frequency_spacing",
-    "frequency_range"
-  ],
-  "loading_examples": {
-    "python": "import json; data = json.load(open('structures.json'))",
-    "matlab": "data = jsondecode(fileread('structures.json'));",
-    "r": "library(jsonlite); data <- fromJSON('structures.json')"
-  },
-  "design_notes": [
-    "Structures have 4\u20138 storeys \u2014 feature matrices are NOT the same size across structures.",
-    "This is intentional: candidates must handle variable-size graphs.",
-    "The population graph edges are based on summary statistics, not raw features.",
-    "Damage signal is in stiffness_Nm and mac at the damaged storey.",
-    "Candidates may construct their own population edges instead of using the provided ones.",
-    "Task is graph-level binary classification: is this structure damaged?"
+  "hidden_generation_notes": [
+    "Each structure is generated from random masses and inter-storey stiffnesses.",
+    "Damage is simulated as a local stiffness reduction in one storey.",
+    "True damaged stiffness values are not exported as inference inputs.",
+    "Mode shapes are perturbed before assigning a dominant modal frequency to each storey."
   ]
 }
