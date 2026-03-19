@@ -1,203 +1,229 @@
 """
-generate_dataset.py
-====================
-Generates a synthetic Population-Based SHM dataset simulating 50 structures
-(e.g. wind turbine towers) with varying properties.
+generate_dataset_v2.py
+======================
+Population-Based SHM dataset — variable-geometry structures.
 
-Outputs (all in ./pbshm_dataset/):
-  - node_features.csv        : structural + vibration features, one row per structure
-  - labels.csv               : binary damage label per structure
-  - edges.csv                : similarity-based population graph edges (k-NN, k=5)
-  - edge_weights.csv         : cosine similarity weights for each edge
-  - population_metadata.json : column descriptions, graph stats, dataset notes
+Each of the 50 structures is a shear-frame with a RANDOM number of storeys (4–8).
+Structures are represented as small graphs: nodes = storeys, edges = inter-storey connections.
+This means feature matrices vary in size across structures — you cannot simply stack them.
 
-No external SHM library required. Dependencies: numpy, scipy, pandas, scikit-learn.
-Run:  python generate_dataset.py
+Physical model: N-DOF lumped-mass shear frame.
+  - Each storey has mass m_i and inter-storey stiffness k_i
+  - Damage = localised stiffness reduction (15–40%) in one storey
+  - Modal features extracted via eigenvalue analysis
+
+Output files (./pbshm_dataset_v2/):
+  structures.json          — one entry per structure: geometry, node features, edge list, label
+  population_edges.csv     — population-level similarity graph (which structures are similar)
+  population_edge_weights.csv
+  population_metadata.json — full description of every field
+
+Dependencies: numpy, scipy, scikit-learn, pandas
 """
 
 import numpy as np
-import pandas as pd
 import json
 import os
+import pandas as pd
 from scipy.linalg import eigh
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import normalize
 
 SEED = 42
-N = 50          # number of structures
-K = 5           # k-NN edges
+N = 50
+MIN_DOF = 4
+MAX_DOF = 8
+K_POP = 5          # population graph k-NN
 DAMAGE_FRAC = 0.30
-OUT_DIR = "pbshm_dataset"
+OUT_DIR = "pbshm_dataset_v2"
 
 rng = np.random.default_rng(SEED)
 os.makedirs(OUT_DIR, exist_ok=True)
 
-# ── 1. Structural parameters ──────────────────────────────────────────────────
-# Each structure: 3-DOF shear frame with variable mass/stiffness/damping
-# Base values with population scatter (~±20%)
-m_base = np.array([2000., 1800., 1500.])   # kg
-k_base = np.array([1.2e6, 1.0e6, 0.8e6])  # N/m
-z_base = np.array([0.03, 0.03, 0.03])      # damping ratios
+# ── damage assignments ────────────────────────────────────────────────────────
+damage_idx      = set(rng.choice(N, size=int(N * DAMAGE_FRAC), replace=False).tolist())
+damage_severity = rng.uniform(0.15, 0.40, N)   # stiffness reduction fraction
+damage_storey   = rng.integers(0, MAX_DOF, N)  # which storey (clamped to ndof later)
 
-scatter = 0.20
-masses    = rng.uniform(1-scatter, 1+scatter, (N, 3)) * m_base
-stiffs    = rng.uniform(1-scatter, 1+scatter, (N, 3)) * k_base
-dampings  = rng.uniform(0.01, 0.06, (N, 3))
+# ── helper: build stiffness matrix for N-DOF shear frame ─────────────────────
+def shear_stiffness_matrix(k):
+    n = len(k)
+    K = np.zeros((n, n))
+    for i in range(n):
+        K[i, i] += k[i]
+        if i > 0:
+            K[i-1, i-1] += k[i]
+            K[i,   i-1] -= k[i]
+            K[i-1, i  ] -= k[i]
+    return K
 
-# Additional scalar geometric properties
-heights   = rng.uniform(20., 50., N)        # m
-aspect    = rng.uniform(10., 25., N)        # H/D
-foundation_stiff = rng.uniform(0.8, 1.2, N) * 5e6  # N/m
-
-# ── 2. Damage flags & effect ──────────────────────────────────────────────────
-damage_idx = rng.choice(N, size=int(N * DAMAGE_FRAC), replace=False)
-damage_labels = np.zeros(N, dtype=int)
-damage_labels[damage_idx] = 1
-
-# Damage reduces stiffness in one storey by 10–35%
-damage_severity = rng.uniform(0.10, 0.35, N)
-damaged_storey  = rng.integers(0, 3, N)
-
-stiffs_damaged = stiffs.copy()
-for i in damage_idx:
-    stiffs_damaged[i, damaged_storey[i]] *= (1 - damage_severity[i])
-
-# ── 3. Modal analysis (eigenvalue problem) ───────────────────────────────────
-def compute_modes(m, k):
-    """3-DOF shear frame: stiffness assembly -> eigenvalues -> natural freqs."""
-    M = np.diag(m)
-    K = np.array([
-        [ k[0]+k[1], -k[1],      0     ],
-        [-k[1],       k[1]+k[2], -k[2]  ],
-        [ 0,         -k[2],       k[2]  ]
+# ── helper: fixed-length population-level summary (for k-NN graph) ───────────
+# We use statistics over the node features so structures of different sizes
+# can still be compared at population level.
+def pop_summary(masses, stiffs, nat_freqs, ndof):
+    return np.array([
+        ndof,
+        np.mean(masses), np.std(masses),
+        np.mean(stiffs), np.std(stiffs),
+        nat_freqs[0],                         # fundamental frequency
+        np.mean(np.diff(nat_freqs)),          # mean freq spacing
+        nat_freqs[-1] - nat_freqs[0],         # freq range
     ])
+
+# ── generate structures ───────────────────────────────────────────────────────
+structures   = []
+pop_summaries = []
+
+for i in range(N):
+    ndof = int(rng.integers(MIN_DOF, MAX_DOF + 1))
+
+    # Physical parameters — scatter around base values
+    masses = rng.uniform(1500, 2500, ndof)          # kg per storey
+    stiffs = rng.uniform(0.8e6, 1.4e6, ndof)        # N/m inter-storey
+    height = rng.uniform(3.0, 5.0, ndof)            # storey height [m]
+
+    # Damage
+    is_damaged = int(i in damage_idx)
+    stiffs_phys = stiffs.copy()
+    dmg_loc = int(damage_storey[i]) % ndof          # clamp to actual ndof
+    if is_damaged:
+        stiffs_phys[dmg_loc] *= (1.0 - damage_severity[i])
+
+    # Modal analysis
+    M = np.diag(masses)
+    K = shear_stiffness_matrix(stiffs_phys)
     vals, vecs = eigh(K, M)
-    freqs = np.sqrt(np.abs(vals)) / (2 * np.pi)   # Hz
-    return freqs, vecs
+    nat_freqs = np.sqrt(np.abs(vals)) / (2 * np.pi)   # Hz, ascending
 
-nat_freqs   = np.zeros((N, 3))
-mode_shapes = np.zeros((N, 3, 3))
+    # Add sensor noise (SNR ~ 30 dB)
+    noise = 10 ** (-30 / 20)
+    nat_freqs_noisy = nat_freqs + rng.normal(0, noise * nat_freqs, ndof)
 
-for i in range(N):
-    f, v = compute_modes(masses[i], stiffs_damaged[i])
-    nat_freqs[i]   = f
-    mode_shapes[i] = v
+    # MAC values vs. undamaged reference
+    K_ref = shear_stiffness_matrix(stiffs)          # undamaged
+    _, vecs_ref = eigh(K_ref, M)
+    mac_vals = np.array([
+        (np.dot(vecs[:, j], vecs_ref[:, j])**2 /
+         (np.dot(vecs[:, j], vecs[:, j]) * np.dot(vecs_ref[:, j], vecs_ref[:, j]) + 1e-12))
+        for j in range(ndof)
+    ])
 
-# ── 4. MAC values (mode shape correlation vs. undamaged reference) ────────────
-ref_f, ref_v = compute_modes(m_base, k_base)
+    # ── Node features (one row per storey) ───────────────────────────────────
+    # Each node: [mass, stiffness_above, storey_height, nat_freq_j, mac_j]
+    # nat_freq_j and mac_j are the mode most associated with storey j
+    # (using mode shape amplitude as proxy for participation)
+    dominant_mode = np.argmax(np.abs(vecs), axis=1)   # shape (ndof,)
+    node_features = []
+    for j in range(ndof):
+        m_j = int(dominant_mode[j])
+        node_features.append({
+            "storey":           j,
+            "mass_kg":          round(float(masses[j]), 2),
+            "stiffness_Nm":     round(float(stiffs_phys[j]), 2),
+            "height_m":         round(float(height[j]), 3),
+            "nat_freq_Hz":      round(float(nat_freqs_noisy[m_j]), 5),
+            "mac":              round(float(np.clip(mac_vals[m_j], 0, 1)), 5),
+        })
 
-def mac(phi1, phi2):
-    num  = np.dot(phi1, phi2)**2
-    den  = np.dot(phi1, phi1) * np.dot(phi2, phi2)
-    return num / (den + 1e-12)
+    # ── Edges (chain: storey j — storey j+1) ─────────────────────────────────
+    edges = [[j, j+1] for j in range(ndof - 1)]
 
-mac_vals = np.zeros((N, 3))
-for i in range(N):
-    for j in range(3):
-        mac_vals[i, j] = mac(mode_shapes[i, :, j], ref_v[:, j])
+    # ── Structure record ──────────────────────────────────────────────────────
+    structures.append({
+        "structure_id":   i,
+        "n_storeys":      ndof,
+        "damaged":        is_damaged,
+        "damage_storey":  dmg_loc if is_damaged else None,
+        "node_features":  node_features,
+        "edges":          edges,
+        "feature_names":  ["mass_kg", "stiffness_Nm", "height_m", "nat_freq_Hz", "mac"],
+    })
 
-# ── 5. Add sensor noise ───────────────────────────────────────────────────────
-snr_db = 30
-noise_scale = 10 ** (-snr_db / 20)
-nat_freqs += rng.normal(0, noise_scale * nat_freqs.std(axis=0), nat_freqs.shape)
-mac_vals   = np.clip(mac_vals + rng.normal(0, 0.01, mac_vals.shape), 0, 1)
+    pop_summaries.append(pop_summary(masses, stiffs_phys, nat_freqs_noisy, ndof))
 
-# ── 6. Assemble node feature matrix ──────────────────────────────────────────
-# Structural params (mean per structure)
-mean_mass    = masses.mean(axis=1)
-mean_stiff   = stiffs.mean(axis=1)
-mean_damp    = dampings.mean(axis=1)
-
-feature_cols = (
-    ["mass_mean_kg", "stiffness_mean_Nm", "damping_ratio_mean",
-     "height_m", "aspect_ratio", "foundation_stiffness_Nm"] +
-    [f"nat_freq_{i+1}_Hz" for i in range(3)] +
-    [f"mac_mode_{i+1}"    for i in range(3)]
-)
-
-X = np.column_stack([
-    mean_mass, mean_stiff, mean_damp,
-    heights, aspect, foundation_stiff,
-    nat_freqs,
-    mac_vals
-])
-
-df_features = pd.DataFrame(X, columns=feature_cols)
-df_features.insert(0, "structure_id", np.arange(N))
-df_features.to_csv(f"{OUT_DIR}/node_features.csv", index=False)
-
-# ── 7. Labels ─────────────────────────────────────────────────────────────────
-df_labels = pd.DataFrame({
-    "structure_id": np.arange(N),
-    "damaged":      damage_labels
-})
-df_labels.to_csv(f"{OUT_DIR}/labels.csv", index=False)
-
-# ── 8. Population graph (k-NN on normalised features) ─────────────────────────
-X_norm = normalize(X, axis=0)
-nbrs = NearestNeighbors(n_neighbors=K+1, metric="cosine").fit(X_norm)
-distances, indices = nbrs.kneighbors(X_norm)
+# ── Population graph (k-NN on summary vectors) ───────────────────────────────
+S = normalize(np.array(pop_summaries), axis=0)
+nbrs = NearestNeighbors(n_neighbors=K_POP + 1, metric="cosine").fit(S)
+distances, indices = nbrs.kneighbors(S)
 
 src_list, dst_list, w_list = [], [], []
 for i in range(N):
     for j, d in zip(indices[i, 1:], distances[i, 1:]):
         src_list.append(i)
         dst_list.append(int(j))
-        w_list.append(float(1 - d))   # cosine similarity
+        w_list.append(round(float(1 - d), 6))
 
-df_edges = pd.DataFrame({"source": src_list, "target": dst_list})
-df_edges.to_csv(f"{OUT_DIR}/edges.csv", index=False)
+# ── Save ──────────────────────────────────────────────────────────────────────
+with open(f"{OUT_DIR}/structures.json", "w") as f:
+    json.dump(structures, f, indent=2)
 
-df_weights = pd.DataFrame({"source": src_list, "target": dst_list, "cosine_similarity": w_list})
-df_weights.to_csv(f"{OUT_DIR}/edge_weights.csv", index=False)
+pd.DataFrame({"source": src_list, "target": dst_list}).to_csv(
+    f"{OUT_DIR}/population_edges.csv", index=False)
+pd.DataFrame({"source": src_list, "target": dst_list, "cosine_similarity": w_list}).to_csv(
+    f"{OUT_DIR}/population_edge_weights.csv", index=False)
 
-# ── 9. Metadata JSON ──────────────────────────────────────────────────────────
+# ── Metadata ──────────────────────────────────────────────────────────────────
+damaged_count = sum(1 for s in structures if s["damaged"])
+storey_counts = [s["n_storeys"] for s in structures]
+
 meta = {
     "description": (
-        "Synthetic PBSHM dataset: 50 simulated 3-DOF shear-frame structures "
-        "with variable mass, stiffness, damping, and geometry. "
-        "Modal features extracted via eigenvalue analysis. "
-        "Edges connect structurally similar structures (cosine k-NN, k=5)."
+        "Population of 50 shear-frame structures with VARIABLE number of storeys (4–8). "
+        "Each structure is a small graph: nodes = storeys, edges = inter-storey connections. "
+        "Structures vary in geometry — feature matrices differ in size across structures. "
+        "The population graph connects structurally similar structures."
     ),
-    "n_structures": N,
-    "n_damaged":    int(damage_labels.sum()),
-    "n_healthy":    int((1 - damage_labels).sum()),
-    "n_edges":      len(src_list),
-    "knn_k":        K,
-    "random_seed":  SEED,
+    "n_structures":       N,
+    "n_damaged":          damaged_count,
+    "n_healthy":          N - damaged_count,
+    "storey_range":       [MIN_DOF, MAX_DOF],
+    "storey_distribution": {str(k): storey_counts.count(k) for k in range(MIN_DOF, MAX_DOF+1)},
+    "population_graph_k": K_POP,
+    "random_seed":        SEED,
     "files": {
-        "node_features.csv":  "Shape (50, 13). First column is structure_id.",
-        "labels.csv":         "Shape (50, 2). Columns: structure_id, damaged (0/1).",
-        "edges.csv":          "Edge list. Columns: source, target (structure_id indices).",
-        "edge_weights.csv":   "Edge list with cosine similarity weight.",
+        "structures.json": (
+            "List of 50 structure objects. Each has: structure_id, n_storeys, damaged (0/1), "
+            "damage_storey (null if healthy), node_features (list of dicts, one per storey), "
+            "edges (list of [src, dst] pairs), feature_names."
+        ),
+        "population_edges.csv":        "Population-level similarity graph. Columns: source, target.",
+        "population_edge_weights.csv": "Same with cosine_similarity weight column.",
     },
-    "feature_descriptions": {
-        "mass_mean_kg":              "Mean storey mass across 3 DOF [kg]",
-        "stiffness_mean_Nm":         "Mean inter-storey stiffness [N/m]",
-        "damping_ratio_mean":        "Mean viscous damping ratio [-]",
-        "height_m":                  "Total structure height [m]",
-        "aspect_ratio":              "Height-to-diameter ratio [-]",
-        "foundation_stiffness_Nm":   "Foundation rotational stiffness [N/m]",
-        "nat_freq_1_Hz":             "1st natural frequency [Hz] (noisy measurement)",
-        "nat_freq_2_Hz":             "2nd natural frequency [Hz]",
-        "nat_freq_3_Hz":             "3rd natural frequency [Hz]",
-        "mac_mode_1":                "MAC value, mode 1 vs undamaged reference [-]",
-        "mac_mode_2":                "MAC value, mode 2 vs undamaged reference [-]",
-        "mac_mode_3":                "MAC value, mode 3 vs undamaged reference [-]",
+    "node_feature_descriptions": {
+        "mass_kg":       "Storey mass [kg]",
+        "stiffness_Nm":  "Inter-storey stiffness [N/m] — reduced if this storey is damaged",
+        "height_m":      "Storey height [m]",
+        "nat_freq_Hz":   "Natural frequency of the dominant mode for this storey [Hz] (noisy)",
+        "mac":           "MAC value of that mode vs. undamaged reference [-]",
     },
-    "notes": [
-        "Damage is simulated as a stiffness reduction (10-35%) in one storey.",
-        "The undamaged reference is the population-mean structure.",
-        "nat_freq and MAC features carry damage signal; structural params encode population heterogeneity.",
-        "Candidates are free to construct their own edges instead of using the provided ones.",
-        "Tool-agnostic: load with pandas (Python), readtable (MATLAB), read.csv (R), etc.",
+    "population_summary_features_used_for_edges": [
+        "n_storeys",
+        "mean(mass)", "std(mass)",
+        "mean(stiffness)", "std(stiffness)",
+        "fundamental_frequency",
+        "mean_frequency_spacing",
+        "frequency_range",
+    ],
+    "loading_examples": {
+        "python": "import json; data = json.load(open('structures.json'))",
+        "matlab": "data = jsondecode(fileread('structures.json'));",
+        "r":      "library(jsonlite); data <- fromJSON('structures.json')",
+    },
+    "design_notes": [
+        "Structures have 4–8 storeys — feature matrices are NOT the same size across structures.",
+        "This is intentional: candidates must handle variable-size graphs.",
+        "The population graph edges are based on summary statistics, not raw features.",
+        "Damage signal is in stiffness_Nm and mac at the damaged storey.",
+        "Candidates may construct their own population edges instead of using the provided ones.",
+        "Task is graph-level binary classification: is this structure damaged?",
     ]
 }
 
 with open(f"{OUT_DIR}/population_metadata.json", "w") as f:
     json.dump(meta, f, indent=2)
 
-print("Dataset generated successfully.")
-print(f"  Structures : {N}  |  Damaged: {damage_labels.sum()}  |  Healthy: {N - damage_labels.sum()}")
-print(f"  Edges      : {len(src_list)}")
-print(f"  Files saved to ./{OUT_DIR}/")
+print("Dataset generated.")
+print(f"  Structures : {N}  |  Damaged: {damaged_count}  |  Healthy: {N - damaged_count}")
+print(f"  Storey counts: { {k: storey_counts.count(k) for k in range(MIN_DOF, MAX_DOF+1)} }")
+print(f"  Population edges: {len(src_list)}")
+print(f"  Saved to ./{OUT_DIR}/")

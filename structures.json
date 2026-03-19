@@ -1,0 +1,4204 @@
+[
+  {
+    "structure_id": 0,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1652.31,
+        "stiffness_Nm": 1017087.57,
+        "height_m": 3.532,
+        "nat_freq_Hz": 5.51307,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2196.32,
+        "stiffness_Nm": 852589.95,
+        "height_m": 4.938,
+        "nat_freq_Hz": 2.6954,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1946.16,
+        "stiffness_Nm": 870803.54,
+        "height_m": 4.558,
+        "nat_freq_Hz": 6.55309,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1881.02,
+        "stiffness_Nm": 1377138.6,
+        "height_m": 4.434,
+        "nat_freq_Hz": 8.00117,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1801.51,
+        "stiffness_Nm": 1345148.41,
+        "height_m": 3.899,
+        "nat_freq_Hz": 8.00117,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2130.28,
+        "stiffness_Nm": 1219824.28,
+        "height_m": 3.544,
+        "nat_freq_Hz": 0.83333,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 1,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2356.61,
+        "stiffness_Nm": 1189907.96,
+        "height_m": 3.289,
+        "nat_freq_Hz": 4.70282,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2258.52,
+        "stiffness_Nm": 850666.59,
+        "height_m": 3.207,
+        "nat_freq_Hz": 5.78,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2219.46,
+        "stiffness_Nm": 1049484.44,
+        "height_m": 4.175,
+        "nat_freq_Hz": 2.46709,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1932.09,
+        "stiffness_Nm": 824968.5,
+        "height_m": 3.341,
+        "nat_freq_Hz": 6.72354,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2127.31,
+        "stiffness_Nm": 1096394.49,
+        "height_m": 4.85,
+        "nat_freq_Hz": 6.72354,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2084.1,
+        "stiffness_Nm": 997916.73,
+        "height_m": 4.162,
+        "nat_freq_Hz": 0.79673,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 2,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1582.73,
+        "stiffness_Nm": 1143036.83,
+        "height_m": 4.041,
+        "nat_freq_Hz": 6.68727,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1986.66,
+        "stiffness_Nm": 1084093.64,
+        "height_m": 3.878,
+        "nat_freq_Hz": 3.59188,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1990.71,
+        "stiffness_Nm": 960185.4,
+        "height_m": 3.043,
+        "nat_freq_Hz": 5.52352,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2437.83,
+        "stiffness_Nm": 998941.4,
+        "height_m": 4.653,
+        "nat_freq_Hz": 1.23626,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 3,
+    "n_storeys": 7,
+    "damaged": 1,
+    "damage_storey": 0,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1781.23,
+        "stiffness_Nm": 528909.6,
+        "height_m": 3.582,
+        "nat_freq_Hz": 3.73351,
+        "mac": 0.98584
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2159.42,
+        "stiffness_Nm": 1132911.48,
+        "height_m": 4.03,
+        "nat_freq_Hz": 6.77518,
+        "mac": 0.98512
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2226.99,
+        "stiffness_Nm": 1022553.37,
+        "height_m": 3.512,
+        "nat_freq_Hz": 5.24526,
+        "mac": 0.98771
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2268.65,
+        "stiffness_Nm": 1297873.85,
+        "height_m": 4.872,
+        "nat_freq_Hz": 7.86952,
+        "mac": 0.99978
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1607.74,
+        "stiffness_Nm": 1284950.88,
+        "height_m": 3.329,
+        "nat_freq_Hz": 7.86952,
+        "mac": 0.99978
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2416.01,
+        "stiffness_Nm": 990283.34,
+        "height_m": 3.09,
+        "nat_freq_Hz": 0.65923,
+        "mac": 0.99631
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1730.21,
+        "stiffness_Nm": 1371739.64,
+        "height_m": 3.87,
+        "nat_freq_Hz": 6.12454,
+        "mac": 0.9816
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 4,
+    "n_storeys": 7,
+    "damaged": 1,
+    "damage_storey": 4,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2272.01,
+        "stiffness_Nm": 944582.35,
+        "height_m": 3.393,
+        "nat_freq_Hz": 4.23241,
+        "mac": 0.94729
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2161.66,
+        "stiffness_Nm": 873654.76,
+        "height_m": 3.621,
+        "nat_freq_Hz": 2.04561,
+        "mac": 0.99394
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1873.66,
+        "stiffness_Nm": 1298667.6,
+        "height_m": 4.555,
+        "nat_freq_Hz": 6.79209,
+        "mac": 0.99535
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1594.47,
+        "stiffness_Nm": 891970.59,
+        "height_m": 4.944,
+        "nat_freq_Hz": 5.51455,
+        "mac": 0.94099
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2246.79,
+        "stiffness_Nm": 628108.35,
+        "height_m": 4.001,
+        "nat_freq_Hz": 3.71853,
+        "mac": 0.99997
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1762.46,
+        "stiffness_Nm": 1159629.67,
+        "height_m": 3.288,
+        "nat_freq_Hz": 6.89937,
+        "mac": 0.97201
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2436.81,
+        "stiffness_Nm": 1324737.22,
+        "height_m": 3.028,
+        "nat_freq_Hz": 0.74115,
+        "mac": 0.99897
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 5,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2304.12,
+        "stiffness_Nm": 1038546.92,
+        "height_m": 4.85,
+        "nat_freq_Hz": 4.32351,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2215.41,
+        "stiffness_Nm": 980569.22,
+        "height_m": 3.05,
+        "nat_freq_Hz": 6.33277,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2238.98,
+        "stiffness_Nm": 1093150.43,
+        "height_m": 4.11,
+        "nat_freq_Hz": 6.33277,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1631.06,
+        "stiffness_Nm": 1197718.53,
+        "height_m": 4.268,
+        "nat_freq_Hz": 7.68789,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1623.75,
+        "stiffness_Nm": 1373373.95,
+        "height_m": 3.212,
+        "nat_freq_Hz": 7.68789,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2427.56,
+        "stiffness_Nm": 971867.74,
+        "height_m": 3.281,
+        "nat_freq_Hz": 0.89049,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 6,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2284.76,
+        "stiffness_Nm": 1278090.25,
+        "height_m": 4.735,
+        "nat_freq_Hz": 3.84636,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1517.84,
+        "stiffness_Nm": 939584.45,
+        "height_m": 4.206,
+        "nat_freq_Hz": 7.27823,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1609.14,
+        "stiffness_Nm": 1118461.75,
+        "height_m": 3.825,
+        "nat_freq_Hz": 7.27823,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2329.43,
+        "stiffness_Nm": 1163609.49,
+        "height_m": 3.748,
+        "nat_freq_Hz": 1.3699,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 7,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1736.66,
+        "stiffness_Nm": 887703.95,
+        "height_m": 3.569,
+        "nat_freq_Hz": 6.96571,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2246.01,
+        "stiffness_Nm": 1294798.51,
+        "height_m": 3.307,
+        "nat_freq_Hz": 6.96571,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2316.57,
+        "stiffness_Nm": 986200.8,
+        "height_m": 3.231,
+        "nat_freq_Hz": 5.36064,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1605.28,
+        "stiffness_Nm": 886323.16,
+        "height_m": 3.042,
+        "nat_freq_Hz": 7.82004,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1566.56,
+        "stiffness_Nm": 1352582.28,
+        "height_m": 3.111,
+        "nat_freq_Hz": 7.82004,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2094.43,
+        "stiffness_Nm": 899319.03,
+        "height_m": 3.349,
+        "nat_freq_Hz": 0.87654,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 8,
+    "n_storeys": 5,
+    "damaged": 1,
+    "damage_storey": 0,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2375.0,
+        "stiffness_Nm": 595153.44,
+        "height_m": 4.048,
+        "nat_freq_Hz": 4.76121,
+        "mac": 0.98741
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2351.13,
+        "stiffness_Nm": 1142739.59,
+        "height_m": 3.203,
+        "nat_freq_Hz": 5.76886,
+        "mac": 0.9919
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1543.48,
+        "stiffness_Nm": 1049757.46,
+        "height_m": 4.667,
+        "nat_freq_Hz": 6.99093,
+        "mac": 0.99944
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1681.5,
+        "stiffness_Nm": 829552.47,
+        "height_m": 3.104,
+        "nat_freq_Hz": 5.76886,
+        "mac": 0.9919
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1736.74,
+        "stiffness_Nm": 1024168.48,
+        "height_m": 4.85,
+        "nat_freq_Hz": 0.91303,
+        "mac": 0.99392
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 9,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2142.48,
+        "stiffness_Nm": 1077679.62,
+        "height_m": 3.834,
+        "nat_freq_Hz": 5.51992,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2279.0,
+        "stiffness_Nm": 1031053.7,
+        "height_m": 3.465,
+        "nat_freq_Hz": 2.41725,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1634.55,
+        "stiffness_Nm": 1183737.96,
+        "height_m": 3.735,
+        "nat_freq_Hz": 7.46295,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2036.07,
+        "stiffness_Nm": 959877.99,
+        "height_m": 3.733,
+        "nat_freq_Hz": 4.2065,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2014.22,
+        "stiffness_Nm": 883861.05,
+        "height_m": 3.655,
+        "nat_freq_Hz": 6.50086,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2357.57,
+        "stiffness_Nm": 1086726.36,
+        "height_m": 3.759,
+        "nat_freq_Hz": 0.83017,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 10,
+    "n_storeys": 7,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2035.43,
+        "stiffness_Nm": 1240935.9,
+        "height_m": 4.451,
+        "nat_freq_Hz": 5.50234,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2348.56,
+        "stiffness_Nm": 921442.76,
+        "height_m": 3.169,
+        "nat_freq_Hz": 2.14305,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2152.59,
+        "stiffness_Nm": 1216878.88,
+        "height_m": 4.872,
+        "nat_freq_Hz": 7.14406,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2304.39,
+        "stiffness_Nm": 1316431.44,
+        "height_m": 3.275,
+        "nat_freq_Hz": 7.14406,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2032.72,
+        "stiffness_Nm": 879261.7,
+        "height_m": 4.918,
+        "nat_freq_Hz": 6.33525,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2132.92,
+        "stiffness_Nm": 1168627.84,
+        "height_m": 4.602,
+        "nat_freq_Hz": 6.33525,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1788.16,
+        "stiffness_Nm": 857057.45,
+        "height_m": 4.187,
+        "nat_freq_Hz": 3.5893,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 11,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2072.43,
+        "stiffness_Nm": 1279546.83,
+        "height_m": 3.239,
+        "nat_freq_Hz": 6.0947,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1965.99,
+        "stiffness_Nm": 1095291.93,
+        "height_m": 3.234,
+        "nat_freq_Hz": 7.49262,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2022.63,
+        "stiffness_Nm": 1159756.06,
+        "height_m": 3.175,
+        "nat_freq_Hz": 7.49262,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2263.92,
+        "stiffness_Nm": 1358741.74,
+        "height_m": 4.316,
+        "nat_freq_Hz": 1.34699,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 12,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2398.37,
+        "stiffness_Nm": 888670.02,
+        "height_m": 4.872,
+        "nat_freq_Hz": 5.66692,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2262.53,
+        "stiffness_Nm": 1361676.48,
+        "height_m": 4.561,
+        "nat_freq_Hz": 6.36639,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1770.53,
+        "stiffness_Nm": 1062742.42,
+        "height_m": 3.959,
+        "nat_freq_Hz": 5.66692,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1864.19,
+        "stiffness_Nm": 1029991.89,
+        "height_m": 3.753,
+        "nat_freq_Hz": 7.97078,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1814.44,
+        "stiffness_Nm": 1237811.43,
+        "height_m": 4.973,
+        "nat_freq_Hz": 7.97078,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1657.61,
+        "stiffness_Nm": 1131795.84,
+        "height_m": 4.436,
+        "nat_freq_Hz": 0.95433,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 13,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1512.3,
+        "stiffness_Nm": 1075128.85,
+        "height_m": 4.563,
+        "nat_freq_Hz": 7.16945,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1954.32,
+        "stiffness_Nm": 1065388.48,
+        "height_m": 3.221,
+        "nat_freq_Hz": 4.04492,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2325.4,
+        "stiffness_Nm": 981156.43,
+        "height_m": 4.994,
+        "nat_freq_Hz": 1.25778,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1795.36,
+        "stiffness_Nm": 1351065.14,
+        "height_m": 4.758,
+        "nat_freq_Hz": 1.25778,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 14,
+    "n_storeys": 7,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1590.44,
+        "stiffness_Nm": 1346382.94,
+        "height_m": 3.477,
+        "nat_freq_Hz": 6.94714,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2397.03,
+        "stiffness_Nm": 1193761.42,
+        "height_m": 4.699,
+        "nat_freq_Hz": 2.35429,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1529.0,
+        "stiffness_Nm": 821697.63,
+        "height_m": 3.114,
+        "nat_freq_Hz": 6.07035,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1740.83,
+        "stiffness_Nm": 803257.9,
+        "height_m": 4.602,
+        "nat_freq_Hz": 3.9452,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1643.02,
+        "stiffness_Nm": 830994.75,
+        "height_m": 4.856,
+        "nat_freq_Hz": 5.25442,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2276.77,
+        "stiffness_Nm": 1163555.11,
+        "height_m": 4.544,
+        "nat_freq_Hz": 0.81294,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1698.2,
+        "stiffness_Nm": 1280889.09,
+        "height_m": 4.396,
+        "nat_freq_Hz": 5.25442,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 15,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1770.76,
+        "stiffness_Nm": 832700.19,
+        "height_m": 4.419,
+        "nat_freq_Hz": 6.56585,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2209.9,
+        "stiffness_Nm": 1169785.38,
+        "height_m": 3.346,
+        "nat_freq_Hz": 3.34343,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2480.2,
+        "stiffness_Nm": 825410.33,
+        "height_m": 3.183,
+        "nat_freq_Hz": 5.81549,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2111.54,
+        "stiffness_Nm": 1330487.43,
+        "height_m": 3.367,
+        "nat_freq_Hz": 1.09457,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 16,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2072.41,
+        "stiffness_Nm": 1146810.33,
+        "height_m": 3.297,
+        "nat_freq_Hz": 4.08815,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1645.13,
+        "stiffness_Nm": 1219865.57,
+        "height_m": 4.017,
+        "nat_freq_Hz": 7.79649,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2446.02,
+        "stiffness_Nm": 1189539.89,
+        "height_m": 3.808,
+        "nat_freq_Hz": 1.43334,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1801.34,
+        "stiffness_Nm": 1364356.65,
+        "height_m": 3.948,
+        "nat_freq_Hz": 1.43334,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 17,
+    "n_storeys": 7,
+    "damaged": 1,
+    "damage_storey": 0,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2110.99,
+        "stiffness_Nm": 631463.06,
+        "height_m": 4.296,
+        "nat_freq_Hz": 4.94089,
+        "mac": 0.99395
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2134.63,
+        "stiffness_Nm": 1051040.03,
+        "height_m": 4.305,
+        "nat_freq_Hz": 6.71417,
+        "mac": 0.99884
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1911.81,
+        "stiffness_Nm": 1084479.61,
+        "height_m": 3.632,
+        "nat_freq_Hz": 6.71417,
+        "mac": 0.99884
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1908.78,
+        "stiffness_Nm": 935355.72,
+        "height_m": 4.575,
+        "nat_freq_Hz": 3.7669,
+        "mac": 0.9933
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1717.63,
+        "stiffness_Nm": 1143474.76,
+        "height_m": 4.098,
+        "nat_freq_Hz": 7.46238,
+        "mac": 0.99998
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2088.31,
+        "stiffness_Nm": 1139463.14,
+        "height_m": 3.863,
+        "nat_freq_Hz": 0.77793,
+        "mac": 0.99871
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1817.04,
+        "stiffness_Nm": 1221201.31,
+        "height_m": 4.252,
+        "nat_freq_Hz": 0.77793,
+        "mac": 0.99871
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 18,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2299.87,
+        "stiffness_Nm": 1305195.93,
+        "height_m": 4.485,
+        "nat_freq_Hz": 3.74159,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1814.45,
+        "stiffness_Nm": 833340.75,
+        "height_m": 3.029,
+        "nat_freq_Hz": 6.77976,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2337.38,
+        "stiffness_Nm": 968366.86,
+        "height_m": 4.654,
+        "nat_freq_Hz": 2.49501,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1994.14,
+        "stiffness_Nm": 1000478.02,
+        "height_m": 4.713,
+        "nat_freq_Hz": 6.9964,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1615.86,
+        "stiffness_Nm": 903796.67,
+        "height_m": 3.745,
+        "nat_freq_Hz": 6.9964,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1572.06,
+        "stiffness_Nm": 988336.02,
+        "height_m": 3.307,
+        "nat_freq_Hz": 2.49501,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 19,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2187.67,
+        "stiffness_Nm": 1115052.98,
+        "height_m": 4.678,
+        "nat_freq_Hz": 5.47003,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2205.41,
+        "stiffness_Nm": 898250.78,
+        "height_m": 4.981,
+        "nat_freq_Hz": 2.81785,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1887.84,
+        "stiffness_Nm": 899544.12,
+        "height_m": 3.283,
+        "nat_freq_Hz": 6.36128,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2140.89,
+        "stiffness_Nm": 1301782.57,
+        "height_m": 3.896,
+        "nat_freq_Hz": 7.93256,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1510.73,
+        "stiffness_Nm": 1393479.8,
+        "height_m": 3.785,
+        "nat_freq_Hz": 7.93256,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1709.06,
+        "stiffness_Nm": 1133581.66,
+        "height_m": 3.16,
+        "nat_freq_Hz": 2.81785,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 20,
+    "n_storeys": 5,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1544.65,
+        "stiffness_Nm": 1095973.99,
+        "height_m": 4.298,
+        "nat_freq_Hz": 6.59079,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1732.85,
+        "stiffness_Nm": 850469.2,
+        "height_m": 4.34,
+        "nat_freq_Hz": 3.40744,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1792.06,
+        "stiffness_Nm": 946200.47,
+        "height_m": 4.526,
+        "nat_freq_Hz": 7.55578,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1990.2,
+        "stiffness_Nm": 1306153.03,
+        "height_m": 3.116,
+        "nat_freq_Hz": 7.55578,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2086.45,
+        "stiffness_Nm": 1182553.22,
+        "height_m": 3.733,
+        "nat_freq_Hz": 1.04894,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 21,
+    "n_storeys": 7,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2004.79,
+        "stiffness_Nm": 862987.83,
+        "height_m": 3.05,
+        "nat_freq_Hz": 5.83641,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2409.55,
+        "stiffness_Nm": 1039131.5,
+        "height_m": 4.855,
+        "nat_freq_Hz": 2.07814,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2087.12,
+        "stiffness_Nm": 1350402.6,
+        "height_m": 3.896,
+        "nat_freq_Hz": 7.20746,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2350.27,
+        "stiffness_Nm": 1178499.34,
+        "height_m": 3.615,
+        "nat_freq_Hz": 3.3834,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1840.59,
+        "stiffness_Nm": 906503.95,
+        "height_m": 4.197,
+        "nat_freq_Hz": 6.46415,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1998.82,
+        "stiffness_Nm": 1003313.38,
+        "height_m": 3.015,
+        "nat_freq_Hz": 6.46415,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2031.41,
+        "stiffness_Nm": 914961.81,
+        "height_m": 3.556,
+        "nat_freq_Hz": 2.07814,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 22,
+    "n_storeys": 8,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2220.7,
+        "stiffness_Nm": 1192461.45,
+        "height_m": 3.082,
+        "nat_freq_Hz": 5.58894,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2463.21,
+        "stiffness_Nm": 1381889.07,
+        "height_m": 4.555,
+        "nat_freq_Hz": 6.671,
+        "mac": 0.99999
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2282.01,
+        "stiffness_Nm": 1390746.85,
+        "height_m": 3.979,
+        "nat_freq_Hz": 5.58894,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2366.8,
+        "stiffness_Nm": 972936.95,
+        "height_m": 4.971,
+        "nat_freq_Hz": 4.42259,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1614.1,
+        "stiffness_Nm": 1240252.1,
+        "height_m": 3.93,
+        "nat_freq_Hz": 7.74807,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2232.41,
+        "stiffness_Nm": 1249990.12,
+        "height_m": 4.956,
+        "nat_freq_Hz": 4.42259,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1940.09,
+        "stiffness_Nm": 1007895.72,
+        "height_m": 3.823,
+        "nat_freq_Hz": 6.16832,
+        "mac": 1.0
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2053.1,
+        "stiffness_Nm": 874321.86,
+        "height_m": 4.587,
+        "nat_freq_Hz": 0.74371,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 23,
+    "n_storeys": 5,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2175.31,
+        "stiffness_Nm": 1280522.96,
+        "height_m": 3.009,
+        "nat_freq_Hz": 5.32993,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2213.26,
+        "stiffness_Nm": 829378.23,
+        "height_m": 4.029,
+        "nat_freq_Hz": 3.17428,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2273.72,
+        "stiffness_Nm": 940721.09,
+        "height_m": 4.355,
+        "nat_freq_Hz": 4.52685,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2365.46,
+        "stiffness_Nm": 1173138.66,
+        "height_m": 3.059,
+        "nat_freq_Hz": 7.01094,
+        "mac": 0.99999
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2239.43,
+        "stiffness_Nm": 1314875.18,
+        "height_m": 3.803,
+        "nat_freq_Hz": 0.94759,
+        "mac": 0.99999
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 24,
+    "n_storeys": 4,
+    "damaged": 1,
+    "damage_storey": 2,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2353.34,
+        "stiffness_Nm": 964895.03,
+        "height_m": 3.684,
+        "nat_freq_Hz": 3.13433,
+        "mac": 0.98325
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1798.94,
+        "stiffness_Nm": 1331934.54,
+        "height_m": 4.435,
+        "nat_freq_Hz": 6.77912,
+        "mac": 0.97891
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2090.32,
+        "stiffness_Nm": 622862.05,
+        "height_m": 4.615,
+        "nat_freq_Hz": 5.05165,
+        "mac": 0.97395
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1896.94,
+        "stiffness_Nm": 850886.95,
+        "height_m": 4.997,
+        "nat_freq_Hz": 1.21554,
+        "mac": 0.99684
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 25,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2200.88,
+        "stiffness_Nm": 1098149.96,
+        "height_m": 3.404,
+        "nat_freq_Hz": 4.80213,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2095.21,
+        "stiffness_Nm": 880620.15,
+        "height_m": 3.035,
+        "nat_freq_Hz": 6.42551,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1892.37,
+        "stiffness_Nm": 1019227.08,
+        "height_m": 3.907,
+        "nat_freq_Hz": 6.42551,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2415.3,
+        "stiffness_Nm": 840300.0,
+        "height_m": 4.269,
+        "nat_freq_Hz": 1.22148,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 26,
+    "n_storeys": 8,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2040.86,
+        "stiffness_Nm": 1154446.88,
+        "height_m": 4.123,
+        "nat_freq_Hz": 4.32203,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1784.54,
+        "stiffness_Nm": 1192063.53,
+        "height_m": 4.584,
+        "nat_freq_Hz": 7.19267,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2397.0,
+        "stiffness_Nm": 979629.97,
+        "height_m": 4.568,
+        "nat_freq_Hz": 1.94954,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1735.1,
+        "stiffness_Nm": 944823.24,
+        "height_m": 3.877,
+        "nat_freq_Hz": 6.29446,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1825.34,
+        "stiffness_Nm": 993495.41,
+        "height_m": 3.953,
+        "nat_freq_Hz": 5.34476,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2409.06,
+        "stiffness_Nm": 893264.94,
+        "height_m": 4.989,
+        "nat_freq_Hz": 0.64618,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2029.54,
+        "stiffness_Nm": 1324588.62,
+        "height_m": 4.349,
+        "nat_freq_Hz": 6.29446,
+        "mac": 1.0
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2242.32,
+        "stiffness_Nm": 969948.16,
+        "height_m": 4.629,
+        "nat_freq_Hz": 3.20925,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 27,
+    "n_storeys": 8,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1535.84,
+        "stiffness_Nm": 987541.97,
+        "height_m": 3.788,
+        "nat_freq_Hz": 6.26484,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2459.77,
+        "stiffness_Nm": 830576.29,
+        "height_m": 3.833,
+        "nat_freq_Hz": 2.01308,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1603.0,
+        "stiffness_Nm": 866960.22,
+        "height_m": 3.003,
+        "nat_freq_Hz": 6.45548,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1541.08,
+        "stiffness_Nm": 1030702.63,
+        "height_m": 3.224,
+        "nat_freq_Hz": 6.45548,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1746.07,
+        "stiffness_Nm": 836317.07,
+        "height_m": 4.726,
+        "nat_freq_Hz": 7.29937,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1565.53,
+        "stiffness_Nm": 1218913.84,
+        "height_m": 3.002,
+        "nat_freq_Hz": 7.29937,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1955.12,
+        "stiffness_Nm": 924212.32,
+        "height_m": 4.016,
+        "nat_freq_Hz": 5.57829,
+        "mac": 1.0
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2016.09,
+        "stiffness_Nm": 981242.94,
+        "height_m": 3.979,
+        "nat_freq_Hz": 0.63041,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 28,
+    "n_storeys": 6,
+    "damaged": 1,
+    "damage_storey": 4,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2183.26,
+        "stiffness_Nm": 1226934.82,
+        "height_m": 3.377,
+        "nat_freq_Hz": 5.31203,
+        "mac": 0.99914
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1728.25,
+        "stiffness_Nm": 890272.41,
+        "height_m": 3.063,
+        "nat_freq_Hz": 6.6814,
+        "mac": 0.88257
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1830.74,
+        "stiffness_Nm": 828424.41,
+        "height_m": 3.221,
+        "nat_freq_Hz": 5.31203,
+        "mac": 0.99914
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2430.38,
+        "stiffness_Nm": 882923.22,
+        "height_m": 4.24,
+        "nat_freq_Hz": 3.81785,
+        "mac": 0.99376
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1548.57,
+        "stiffness_Nm": 1043075.04,
+        "height_m": 3.483,
+        "nat_freq_Hz": 6.86364,
+        "mac": 0.87863
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1960.77,
+        "stiffness_Nm": 805555.87,
+        "height_m": 4.138,
+        "nat_freq_Hz": 2.44119,
+        "mac": 0.99568
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 29,
+    "n_storeys": 8,
+    "damaged": 1,
+    "damage_storey": 4,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2355.49,
+        "stiffness_Nm": 991039.47,
+        "height_m": 3.693,
+        "nat_freq_Hz": 3.82258,
+        "mac": 0.97127
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1754.26,
+        "stiffness_Nm": 1279528.11,
+        "height_m": 3.038,
+        "nat_freq_Hz": 7.2107,
+        "mac": 0.98546
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2418.79,
+        "stiffness_Nm": 1160440.35,
+        "height_m": 3.331,
+        "nat_freq_Hz": 1.80889,
+        "mac": 0.9932
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1954.46,
+        "stiffness_Nm": 929813.42,
+        "height_m": 4.45,
+        "nat_freq_Hz": 5.6285,
+        "mac": 0.83466
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2103.42,
+        "stiffness_Nm": 673014.76,
+        "height_m": 4.416,
+        "nat_freq_Hz": 4.95779,
+        "mac": 0.96072
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2484.65,
+        "stiffness_Nm": 990581.38,
+        "height_m": 4.477,
+        "nat_freq_Hz": 5.87651,
+        "mac": 0.8072
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1861.54,
+        "stiffness_Nm": 846865.04,
+        "height_m": 3.634,
+        "nat_freq_Hz": 5.6285,
+        "mac": 0.83466
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2313.16,
+        "stiffness_Nm": 817900.86,
+        "height_m": 4.78,
+        "nat_freq_Hz": 2.8611,
+        "mac": 0.98325
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 30,
+    "n_storeys": 7,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1516.58,
+        "stiffness_Nm": 1173075.22,
+        "height_m": 3.036,
+        "nat_freq_Hz": 6.317,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2493.08,
+        "stiffness_Nm": 963912.31,
+        "height_m": 4.191,
+        "nat_freq_Hz": 2.27473,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2084.64,
+        "stiffness_Nm": 830311.82,
+        "height_m": 3.463,
+        "nat_freq_Hz": 4.98032,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1626.91,
+        "stiffness_Nm": 1156740.57,
+        "height_m": 4.748,
+        "nat_freq_Hz": 7.11416,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2397.3,
+        "stiffness_Nm": 976853.12,
+        "height_m": 3.507,
+        "nat_freq_Hz": 4.98032,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2380.38,
+        "stiffness_Nm": 1198172.63,
+        "height_m": 4.222,
+        "nat_freq_Hz": 6.2801,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2036.2,
+        "stiffness_Nm": 1301747.11,
+        "height_m": 4.107,
+        "nat_freq_Hz": 0.73115,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 31,
+    "n_storeys": 8,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1512.47,
+        "stiffness_Nm": 889624.49,
+        "height_m": 4.467,
+        "nat_freq_Hz": 7.68673,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2296.03,
+        "stiffness_Nm": 1376929.78,
+        "height_m": 4.757,
+        "nat_freq_Hz": 7.68673,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2020.23,
+        "stiffness_Nm": 907065.06,
+        "height_m": 3.758,
+        "nat_freq_Hz": 5.56777,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1907.96,
+        "stiffness_Nm": 919725.2,
+        "height_m": 4.034,
+        "nat_freq_Hz": 7.86922,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1594.07,
+        "stiffness_Nm": 1315389.72,
+        "height_m": 4.483,
+        "nat_freq_Hz": 7.86922,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2389.66,
+        "stiffness_Nm": 1347549.65,
+        "height_m": 4.462,
+        "nat_freq_Hz": 4.2843,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1895.01,
+        "stiffness_Nm": 927288.44,
+        "height_m": 4.566,
+        "nat_freq_Hz": 6.62114,
+        "mac": 1.0
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2182.58,
+        "stiffness_Nm": 1081880.53,
+        "height_m": 4.14,
+        "nat_freq_Hz": 0.64217,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 32,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2479.22,
+        "stiffness_Nm": 1165244.68,
+        "height_m": 3.393,
+        "nat_freq_Hz": 3.97606,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1877.14,
+        "stiffness_Nm": 1148593.62,
+        "height_m": 3.754,
+        "nat_freq_Hz": 6.69361,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2219.31,
+        "stiffness_Nm": 1045483.99,
+        "height_m": 3.788,
+        "nat_freq_Hz": 5.17808,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2387.57,
+        "stiffness_Nm": 1161064.85,
+        "height_m": 3.262,
+        "nat_freq_Hz": 7.31623,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1894.63,
+        "stiffness_Nm": 1361228.82,
+        "height_m": 3.326,
+        "nat_freq_Hz": 7.31623,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1819.13,
+        "stiffness_Nm": 1080584.15,
+        "height_m": 4.369,
+        "nat_freq_Hz": 2.80891,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 33,
+    "n_storeys": 5,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1702.09,
+        "stiffness_Nm": 827103.87,
+        "height_m": 3.221,
+        "nat_freq_Hz": 4.94183,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1685.77,
+        "stiffness_Nm": 1088894.8,
+        "height_m": 3.505,
+        "nat_freq_Hz": 7.58696,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2022.01,
+        "stiffness_Nm": 1375599.41,
+        "height_m": 3.59,
+        "nat_freq_Hz": 7.58696,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1968.42,
+        "stiffness_Nm": 1191511.52,
+        "height_m": 4.53,
+        "nat_freq_Hz": 6.32823,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1759.44,
+        "stiffness_Nm": 1097303.93,
+        "height_m": 4.753,
+        "nat_freq_Hz": 3.36074,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 34,
+    "n_storeys": 5,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1637.79,
+        "stiffness_Nm": 1170053.71,
+        "height_m": 4.704,
+        "nat_freq_Hz": 7.07132,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1804.47,
+        "stiffness_Nm": 1125418.64,
+        "height_m": 4.168,
+        "nat_freq_Hz": 7.07132,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2052.9,
+        "stiffness_Nm": 899186.79,
+        "height_m": 4.47,
+        "nat_freq_Hz": 4.70485,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1596.98,
+        "stiffness_Nm": 951953.28,
+        "height_m": 3.592,
+        "nat_freq_Hz": 6.7599,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2345.8,
+        "stiffness_Nm": 896187.21,
+        "height_m": 3.743,
+        "nat_freq_Hz": 1.05472,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 35,
+    "n_storeys": 6,
+    "damaged": 1,
+    "damage_storey": 3,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2396.12,
+        "stiffness_Nm": 1069915.58,
+        "height_m": 4.062,
+        "nat_freq_Hz": 4.36276,
+        "mac": 0.99548
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1600.4,
+        "stiffness_Nm": 947155.38,
+        "height_m": 3.497,
+        "nat_freq_Hz": 7.60931,
+        "mac": 0.99028
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1764.54,
+        "stiffness_Nm": 1226147.12,
+        "height_m": 3.49,
+        "nat_freq_Hz": 7.60931,
+        "mac": 0.99028
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2346.48,
+        "stiffness_Nm": 1048670.71,
+        "height_m": 3.323,
+        "nat_freq_Hz": 4.36276,
+        "mac": 0.99548
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1679.49,
+        "stiffness_Nm": 1324745.08,
+        "height_m": 4.88,
+        "nat_freq_Hz": 7.11919,
+        "mac": 0.99958
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1913.57,
+        "stiffness_Nm": 1003593.29,
+        "height_m": 4.776,
+        "nat_freq_Hz": 2.75507,
+        "mac": 0.99701
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 36,
+    "n_storeys": 4,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1631.75,
+        "stiffness_Nm": 1371923.31,
+        "height_m": 3.506,
+        "nat_freq_Hz": 5.80476,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1625.66,
+        "stiffness_Nm": 898146.13,
+        "height_m": 3.06,
+        "nat_freq_Hz": 7.23085,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2452.25,
+        "stiffness_Nm": 1132649.93,
+        "height_m": 3.238,
+        "nat_freq_Hz": 5.80476,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1982.03,
+        "stiffness_Nm": 924630.35,
+        "height_m": 4.834,
+        "nat_freq_Hz": 1.3144,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 37,
+    "n_storeys": 6,
+    "damaged": 1,
+    "damage_storey": 2,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1687.24,
+        "stiffness_Nm": 1352399.51,
+        "height_m": 4.502,
+        "nat_freq_Hz": 6.64387,
+        "mac": 0.983
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2488.6,
+        "stiffness_Nm": 1004832.24,
+        "height_m": 4.587,
+        "nat_freq_Hz": 2.5297,
+        "mac": 0.99354
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2318.31,
+        "stiffness_Nm": 542255.01,
+        "height_m": 3.424,
+        "nat_freq_Hz": 5.23573,
+        "mac": 0.95918
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2241.61,
+        "stiffness_Nm": 1005442.21,
+        "height_m": 4.848,
+        "nat_freq_Hz": 5.23573,
+        "mac": 0.95918
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1968.76,
+        "stiffness_Nm": 1276674.22,
+        "height_m": 3.876,
+        "nat_freq_Hz": 7.14244,
+        "mac": 0.99598
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1652.88,
+        "stiffness_Nm": 1173625.25,
+        "height_m": 4.278,
+        "nat_freq_Hz": 0.82044,
+        "mac": 0.99837
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 38,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1652.33,
+        "stiffness_Nm": 1076659.66,
+        "height_m": 3.354,
+        "nat_freq_Hz": 6.09719,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2132.28,
+        "stiffness_Nm": 1195970.78,
+        "height_m": 4.356,
+        "nat_freq_Hz": 2.64357,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1892.93,
+        "stiffness_Nm": 1159817.21,
+        "height_m": 4.692,
+        "nat_freq_Hz": 6.09719,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2421.85,
+        "stiffness_Nm": 1083670.38,
+        "height_m": 3.081,
+        "nat_freq_Hz": 4.24987,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1819.16,
+        "stiffness_Nm": 1370036.66,
+        "height_m": 3.899,
+        "nat_freq_Hz": 7.36611,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2226.18,
+        "stiffness_Nm": 1005628.19,
+        "height_m": 4.785,
+        "nat_freq_Hz": 0.8857,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 39,
+    "n_storeys": 5,
+    "damaged": 1,
+    "damage_storey": 2,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2061.82,
+        "stiffness_Nm": 1188243.08,
+        "height_m": 3.183,
+        "nat_freq_Hz": 5.46276,
+        "mac": 0.99975
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2219.78,
+        "stiffness_Nm": 1005417.46,
+        "height_m": 4.335,
+        "nat_freq_Hz": 3.03367,
+        "mac": 0.98908
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2008.93,
+        "stiffness_Nm": 703954.13,
+        "height_m": 4.311,
+        "nat_freq_Hz": 6.09563,
+        "mac": 0.97298
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2407.09,
+        "stiffness_Nm": 1064030.06,
+        "height_m": 4.326,
+        "nat_freq_Hz": 0.93223,
+        "mac": 0.99835
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1919.3,
+        "stiffness_Nm": 875484.21,
+        "height_m": 3.04,
+        "nat_freq_Hz": 0.93223,
+        "mac": 0.99835
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 40,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2167.85,
+        "stiffness_Nm": 1346196.15,
+        "height_m": 3.51,
+        "nat_freq_Hz": 4.54808,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1629.36,
+        "stiffness_Nm": 921513.44,
+        "height_m": 4.251,
+        "nat_freq_Hz": 6.94685,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1775.15,
+        "stiffness_Nm": 1125247.42,
+        "height_m": 3.641,
+        "nat_freq_Hz": 8.44595,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1638.65,
+        "stiffness_Nm": 1220834.66,
+        "height_m": 4.952,
+        "nat_freq_Hz": 8.44595,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1783.52,
+        "stiffness_Nm": 1371753.48,
+        "height_m": 3.799,
+        "nat_freq_Hz": 0.96368,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2174.74,
+        "stiffness_Nm": 1166036.29,
+        "height_m": 4.371,
+        "nat_freq_Hz": 0.96368,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 41,
+    "n_storeys": 8,
+    "damaged": 1,
+    "damage_storey": 0,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1822.22,
+        "stiffness_Nm": 960259.39,
+        "height_m": 4.29,
+        "nat_freq_Hz": 6.45423,
+        "mac": 0.98541
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2044.55,
+        "stiffness_Nm": 1386922.66,
+        "height_m": 3.579,
+        "nat_freq_Hz": 7.52348,
+        "mac": 0.98601
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1989.82,
+        "stiffness_Nm": 1246994.92,
+        "height_m": 3.516,
+        "nat_freq_Hz": 7.52348,
+        "mac": 0.98601
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2132.2,
+        "stiffness_Nm": 1258800.34,
+        "height_m": 4.172,
+        "nat_freq_Hz": 6.45423,
+        "mac": 0.98541
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1834.11,
+        "stiffness_Nm": 1257554.06,
+        "height_m": 3.82,
+        "nat_freq_Hz": 7.29649,
+        "mac": 0.98281
+      },
+      {
+        "storey": 5,
+        "mass_kg": 1744.21,
+        "stiffness_Nm": 1088364.58,
+        "height_m": 3.438,
+        "nat_freq_Hz": 6.45423,
+        "mac": 0.98541
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2412.67,
+        "stiffness_Nm": 1073871.32,
+        "height_m": 4.632,
+        "nat_freq_Hz": 5.75637,
+        "mac": 0.98625
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2423.87,
+        "stiffness_Nm": 944135.77,
+        "height_m": 4.721,
+        "nat_freq_Hz": 0.67466,
+        "mac": 0.99875
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 42,
+    "n_storeys": 8,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1890.06,
+        "stiffness_Nm": 841784.38,
+        "height_m": 3.353,
+        "nat_freq_Hz": 5.54694,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2498.61,
+        "stiffness_Nm": 882798.51,
+        "height_m": 3.847,
+        "nat_freq_Hz": 1.9932,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1692.59,
+        "stiffness_Nm": 1274442.78,
+        "height_m": 4.104,
+        "nat_freq_Hz": 6.93624,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1653.96,
+        "stiffness_Nm": 962379.29,
+        "height_m": 4.002,
+        "nat_freq_Hz": 7.99413,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1922.8,
+        "stiffness_Nm": 1330909.44,
+        "height_m": 4.372,
+        "nat_freq_Hz": 7.99413,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2119.67,
+        "stiffness_Nm": 1198071.95,
+        "height_m": 4.305,
+        "nat_freq_Hz": 4.7575,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2432.9,
+        "stiffness_Nm": 867106.88,
+        "height_m": 4.984,
+        "nat_freq_Hz": 6.23147,
+        "mac": 1.0
+      },
+      {
+        "storey": 7,
+        "mass_kg": 2480.82,
+        "stiffness_Nm": 1299517.57,
+        "height_m": 4.999,
+        "nat_freq_Hz": 0.62761,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 43,
+    "n_storeys": 5,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1853.34,
+        "stiffness_Nm": 992927.41,
+        "height_m": 3.288,
+        "nat_freq_Hz": 5.07422,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2287.46,
+        "stiffness_Nm": 1249292.47,
+        "height_m": 4.758,
+        "nat_freq_Hz": 7.09908,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2332.12,
+        "stiffness_Nm": 1280833.66,
+        "height_m": 3.192,
+        "nat_freq_Hz": 5.07422,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2321.23,
+        "stiffness_Nm": 1094754.47,
+        "height_m": 3.307,
+        "nat_freq_Hz": 6.27003,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1916.67,
+        "stiffness_Nm": 1335818.61,
+        "height_m": 4.068,
+        "nat_freq_Hz": 1.00511,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 44,
+    "n_storeys": 7,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1534.84,
+        "stiffness_Nm": 1123365.06,
+        "height_m": 4.008,
+        "nat_freq_Hz": 7.2952,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2152.26,
+        "stiffness_Nm": 1291519.93,
+        "height_m": 4.501,
+        "nat_freq_Hz": 3.69443,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2323.13,
+        "stiffness_Nm": 855653.65,
+        "height_m": 3.929,
+        "nat_freq_Hz": 5.13636,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1668.0,
+        "stiffness_Nm": 1036688.91,
+        "height_m": 3.736,
+        "nat_freq_Hz": 7.8782,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 1646.86,
+        "stiffness_Nm": 1242678.53,
+        "height_m": 3.438,
+        "nat_freq_Hz": 7.8782,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2360.8,
+        "stiffness_Nm": 954471.18,
+        "height_m": 3.417,
+        "nat_freq_Hz": 6.20148,
+        "mac": 1.0
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2323.12,
+        "stiffness_Nm": 1251397.35,
+        "height_m": 4.503,
+        "nat_freq_Hz": 0.77284,
+        "mac": 1.0
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 45,
+    "n_storeys": 8,
+    "damaged": 1,
+    "damage_storey": 5,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2153.54,
+        "stiffness_Nm": 1193644.33,
+        "height_m": 3.099,
+        "nat_freq_Hz": 5.3085,
+        "mac": 0.92891
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1948.73,
+        "stiffness_Nm": 973450.15,
+        "height_m": 4.203,
+        "nat_freq_Hz": 7.30194,
+        "mac": 0.93398
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1892.92,
+        "stiffness_Nm": 1240835.08,
+        "height_m": 3.972,
+        "nat_freq_Hz": 7.30194,
+        "mac": 0.93398
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2375.08,
+        "stiffness_Nm": 1139852.39,
+        "height_m": 3.52,
+        "nat_freq_Hz": 5.88754,
+        "mac": 0.94602
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2475.6,
+        "stiffness_Nm": 1130545.26,
+        "height_m": 3.837,
+        "nat_freq_Hz": 5.3085,
+        "mac": 0.92891
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2372.86,
+        "stiffness_Nm": 885807.86,
+        "height_m": 4.516,
+        "nat_freq_Hz": 6.96577,
+        "mac": 0.89372
+      },
+      {
+        "storey": 6,
+        "mass_kg": 1692.3,
+        "stiffness_Nm": 1226319.66,
+        "height_m": 4.653,
+        "nat_freq_Hz": 6.96577,
+        "mac": 0.89372
+      },
+      {
+        "storey": 7,
+        "mass_kg": 1720.8,
+        "stiffness_Nm": 815946.66,
+        "height_m": 4.122,
+        "nat_freq_Hz": 2.0377,
+        "mac": 0.99418
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 46,
+    "n_storeys": 4,
+    "damaged": 1,
+    "damage_storey": 3,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1712.28,
+        "stiffness_Nm": 1334158.38,
+        "height_m": 3.119,
+        "nat_freq_Hz": 6.59067,
+        "mac": 0.86411
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2394.51,
+        "stiffness_Nm": 1081973.56,
+        "height_m": 3.43,
+        "nat_freq_Hz": 4.00597,
+        "mac": 0.98006
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2146.29,
+        "stiffness_Nm": 1085655.05,
+        "height_m": 4.172,
+        "nat_freq_Hz": 5.68319,
+        "mac": 0.88328
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1671.96,
+        "stiffness_Nm": 996797.61,
+        "height_m": 3.391,
+        "nat_freq_Hz": 4.00597,
+        "mac": 0.98006
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 47,
+    "n_storeys": 4,
+    "damaged": 1,
+    "damage_storey": 1,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1676.14,
+        "stiffness_Nm": 1016455.21,
+        "height_m": 4.221,
+        "nat_freq_Hz": 4.85853,
+        "mac": 0.95298
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1634.69,
+        "stiffness_Nm": 590454.56,
+        "height_m": 3.411,
+        "nat_freq_Hz": 5.95648,
+        "mac": 0.95614
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2360.28,
+        "stiffness_Nm": 1014421.77,
+        "height_m": 4.777,
+        "nat_freq_Hz": 1.03236,
+        "mac": 0.99854
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1820.4,
+        "stiffness_Nm": 958884.31,
+        "height_m": 4.859,
+        "nat_freq_Hz": 1.03236,
+        "mac": 0.99854
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 48,
+    "n_storeys": 6,
+    "damaged": 0,
+    "damage_storey": null,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 1621.97,
+        "stiffness_Nm": 826505.06,
+        "height_m": 3.341,
+        "nat_freq_Hz": 6.58378,
+        "mac": 1.0
+      },
+      {
+        "storey": 1,
+        "mass_kg": 2352.38,
+        "stiffness_Nm": 1040758.98,
+        "height_m": 4.957,
+        "nat_freq_Hz": 2.43714,
+        "mac": 1.0
+      },
+      {
+        "storey": 2,
+        "mass_kg": 2254.27,
+        "stiffness_Nm": 994362.0,
+        "height_m": 3.997,
+        "nat_freq_Hz": 5.80931,
+        "mac": 1.0
+      },
+      {
+        "storey": 3,
+        "mass_kg": 2319.81,
+        "stiffness_Nm": 1369187.3,
+        "height_m": 3.987,
+        "nat_freq_Hz": 7.5089,
+        "mac": 1.0
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2026.06,
+        "stiffness_Nm": 1146116.58,
+        "height_m": 4.942,
+        "nat_freq_Hz": 7.5089,
+        "mac": 1.0
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2496.68,
+        "stiffness_Nm": 1283714.58,
+        "height_m": 3.761,
+        "nat_freq_Hz": 0.81064,
+        "mac": 0.99999
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  },
+  {
+    "structure_id": 49,
+    "n_storeys": 7,
+    "damaged": 1,
+    "damage_storey": 0,
+    "node_features": [
+      {
+        "storey": 0,
+        "mass_kg": 2089.33,
+        "stiffness_Nm": 715444.18,
+        "height_m": 3.641,
+        "nat_freq_Hz": 3.52769,
+        "mac": 0.97678
+      },
+      {
+        "storey": 1,
+        "mass_kg": 1858.67,
+        "stiffness_Nm": 997557.48,
+        "height_m": 3.691,
+        "nat_freq_Hz": 6.7502,
+        "mac": 0.99538
+      },
+      {
+        "storey": 2,
+        "mass_kg": 1908.67,
+        "stiffness_Nm": 1070627.9,
+        "height_m": 3.757,
+        "nat_freq_Hz": 7.48599,
+        "mac": 0.99922
+      },
+      {
+        "storey": 3,
+        "mass_kg": 1931.52,
+        "stiffness_Nm": 1140760.54,
+        "height_m": 3.189,
+        "nat_freq_Hz": 7.48599,
+        "mac": 0.99922
+      },
+      {
+        "storey": 4,
+        "mass_kg": 2133.15,
+        "stiffness_Nm": 1077090.75,
+        "height_m": 3.332,
+        "nat_freq_Hz": 6.7502,
+        "mac": 0.99538
+      },
+      {
+        "storey": 5,
+        "mass_kg": 2426.77,
+        "stiffness_Nm": 1195252.05,
+        "height_m": 4.446,
+        "nat_freq_Hz": 5.62814,
+        "mac": 0.98717
+      },
+      {
+        "storey": 6,
+        "mass_kg": 2432.78,
+        "stiffness_Nm": 1132639.41,
+        "height_m": 3.778,
+        "nat_freq_Hz": 0.70492,
+        "mac": 0.99791
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "feature_names": [
+      "mass_kg",
+      "stiffness_Nm",
+      "height_m",
+      "nat_freq_Hz",
+      "mac"
+    ]
+  }
+]

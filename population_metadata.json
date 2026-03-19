@@ -1,36 +1,54 @@
 {
-  "description": "Synthetic PBSHM dataset: 50 simulated 3-DOF shear-frame structures with variable mass, stiffness, damping, and geometry. Modal features extracted via eigenvalue analysis. Edges connect structurally similar structures (cosine k-NN, k=5).",
+  "description": "Population of 50 shear-frame structures with VARIABLE number of storeys (4\u20138). Each structure is a small graph: nodes = storeys, edges = inter-storey connections. Structures vary in geometry \u2014 feature matrices differ in size across structures. The population graph connects structurally similar structures.",
   "n_structures": 50,
   "n_damaged": 15,
   "n_healthy": 35,
-  "n_edges": 250,
-  "knn_k": 5,
+  "storey_range": [
+    4,
+    8
+  ],
+  "storey_distribution": {
+    "4": 11,
+    "5": 7,
+    "6": 15,
+    "7": 9,
+    "8": 8
+  },
+  "population_graph_k": 5,
   "random_seed": 42,
   "files": {
-    "node_features.csv": "Shape (50, 13). First column is structure_id.",
-    "labels.csv": "Shape (50, 2). Columns: structure_id, damaged (0/1).",
-    "edges.csv": "Edge list. Columns: source, target (structure_id indices).",
-    "edge_weights.csv": "Edge list with cosine similarity weight."
+    "structures.json": "List of 50 structure objects. Each has: structure_id, n_storeys, damaged (0/1), damage_storey (null if healthy), node_features (list of dicts, one per storey), edges (list of [src, dst] pairs), feature_names.",
+    "population_edges.csv": "Population-level similarity graph. Columns: source, target.",
+    "population_edge_weights.csv": "Same with cosine_similarity weight column."
   },
-  "feature_descriptions": {
-    "mass_mean_kg": "Mean storey mass across 3 DOF [kg]",
-    "stiffness_mean_Nm": "Mean inter-storey stiffness [N/m]",
-    "damping_ratio_mean": "Mean viscous damping ratio [-]",
-    "height_m": "Total structure height [m]",
-    "aspect_ratio": "Height-to-diameter ratio [-]",
-    "foundation_stiffness_Nm": "Foundation rotational stiffness [N/m]",
-    "nat_freq_1_Hz": "1st natural frequency [Hz] (noisy measurement)",
-    "nat_freq_2_Hz": "2nd natural frequency [Hz]",
-    "nat_freq_3_Hz": "3rd natural frequency [Hz]",
-    "mac_mode_1": "MAC value, mode 1 vs undamaged reference [-]",
-    "mac_mode_2": "MAC value, mode 2 vs undamaged reference [-]",
-    "mac_mode_3": "MAC value, mode 3 vs undamaged reference [-]"
+  "node_feature_descriptions": {
+    "mass_kg": "Storey mass [kg]",
+    "stiffness_Nm": "Inter-storey stiffness [N/m] \u2014 reduced if this storey is damaged",
+    "height_m": "Storey height [m]",
+    "nat_freq_Hz": "Natural frequency of the dominant mode for this storey [Hz] (noisy)",
+    "mac": "MAC value of that mode vs. undamaged reference [-]"
   },
-  "notes": [
-    "Damage is simulated as a stiffness reduction (10-35%) in one storey.",
-    "The undamaged reference is the population-mean structure.",
-    "nat_freq and MAC features carry damage signal; structural params encode population heterogeneity.",
-    "Candidates are free to construct their own edges instead of using the provided ones.",
-    "Tool-agnostic: load with pandas (Python), readtable (MATLAB), read.csv (R), etc."
+  "population_summary_features_used_for_edges": [
+    "n_storeys",
+    "mean(mass)",
+    "std(mass)",
+    "mean(stiffness)",
+    "std(stiffness)",
+    "fundamental_frequency",
+    "mean_frequency_spacing",
+    "frequency_range"
+  ],
+  "loading_examples": {
+    "python": "import json; data = json.load(open('structures.json'))",
+    "matlab": "data = jsondecode(fileread('structures.json'));",
+    "r": "library(jsonlite); data <- fromJSON('structures.json')"
+  },
+  "design_notes": [
+    "Structures have 4\u20138 storeys \u2014 feature matrices are NOT the same size across structures.",
+    "This is intentional: candidates must handle variable-size graphs.",
+    "The population graph edges are based on summary statistics, not raw features.",
+    "Damage signal is in stiffness_Nm and mac at the damaged storey.",
+    "Candidates may construct their own population edges instead of using the provided ones.",
+    "Task is graph-level binary classification: is this structure damaged?"
   ]
 }
