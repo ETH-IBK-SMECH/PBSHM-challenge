@@ -28,7 +28,7 @@ In other words:
 
 ## Dataset
 
-The revised dataset lives in [pbshm_dataset_revised](C:\Users\chatz\Downloads\pbshm_assignment_v2\pbshm_assignment_revised\pbshm_dataset_revised).
+The dataset files are located in this repository.
 
 ### Files
 
