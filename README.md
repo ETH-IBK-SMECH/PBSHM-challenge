@@ -1,4 +1,4 @@
-# PBSHM Coding Challenge - Revised Beginner-Friendly Assignment
+# PBSHM Coding Challenge
 
 **Structural Health Monitoring Group | ETH IBK**
 
