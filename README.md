@@ -1,188 +1,181 @@
-# PBSHM Coding Challenge — Doctoral Candidate Assignment
+# PBSHM Coding Challenge - Revised Beginner-Friendly Assignment
 
-**Structural Health Monitoring Group · ETH IBK**
-
----
+**Structural Health Monitoring Group | ETH IBK**
 
 ## Overview
 
-This repository contains the data and instructions for a take-home coding assignment on **Population-Based Structural Health Monitoring (PBSHM)**.
+This repository contains a small take-home coding exercise on **Population-Based Structural Health Monitoring (PBSHM)**.
 
-You will work with a simulated population of 50 structures with **variable geometry** and build models that exploit population-level information to improve damage detection — with a Graph Neural Network (GNN) as the required centrepiece.
+You will work with a simulated population of 50 shear-frame structures with a **variable number of storeys (4-8)**. The goal is to detect whether a structure is damaged and, if time permits, explore whether graph-based learning can support **damage localization** through node- or edge-level damage indicators.
 
-| | |
-|---|---|
-| **Presentation** | 10-minute talk + Q&A |
-| **Language** | Your choice (Python, MATLAB, R, …) |
-| **Submission** | Email your GitHub repo link by the agreed deadline |
+This revised version is intentionally beginner-friendly:
 
----
+- the assignment starts with exploratory analysis and simple baselines
+- the GNN is part of the progression, not the only meaningful task
+- the candidate-facing data is framed as **measurement-like inputs**, not direct access to latent simulator state
+
+## What Is Simulated vs. What You Should Use
+
+The dataset was generated from an `N`-DOF lumped-mass shear-frame model with localized stiffness reduction used to simulate damage. We provide the generation script so the physical assumptions are transparent.
+
+However, for the purposes of this exercise, assume that in deployment you **do not directly know the true damaged stiffness values or other hidden simulator state**. Your method should be built from the provided measurement-like quantities, graph structure, and labels.
+
+In other words:
+
+- the simulation model is disclosed for physical clarity
+- the inference task should use the provided candidate-facing files
+- do not treat hidden physical parameters as measured inputs at rollout time
 
 ## Dataset
 
-The dataset simulates a population of 50 shear-frame structures (e.g. wind turbine towers or offshore platforms) with a **variable number of storeys (4–8)**. Each structure is a small graph — nodes are storeys, edges are inter-storey connections. Structures vary in size and physical properties, so feature matrices are **not the same shape** across the population. Approximately 30% of structures are damaged (localised stiffness reduction in one storey).
+The revised dataset lives in [pbshm_dataset_revised](C:\Users\chatz\Downloads\pbshm_assignment_v2\pbshm_assignment_revised\pbshm_dataset_revised).
 
-This variability is intentional: handling geometrically heterogeneous members is a core challenge of PBSHM.
+### Files
 
 | File | Description |
 |---|---|
-| `structures.json` | One entry per structure: geometry, per-storey node features, edge list, damage label |
-| `population_edges.csv` | Population-level similarity graph connecting structures (k-NN, k=5) |
-| `population_edge_weights.csv` | Same with cosine similarity weights |
-| `population_metadata.json` | Full description of every field, design notes — **read this first** |
-| `generate_dataset.py` | Script used to generate the data (for reference/reproducibility) |
+| `structures_measurements.json` | Candidate-facing inputs: one entry per structure with graph topology and measurement-like node features |
+| `structure_labels.csv` | Structure-level detection label and true damaged storey for evaluation / optional localization analysis |
+| `population_edges_geometry.csv` | Starter population graph built from geometry-only summaries |
+| `population_edge_weights_geometry.csv` | Same edges with cosine similarity weights |
+| `population_metadata.json` | Dataset summary and field descriptions |
+| `generate_dataset_revised.py` | Reference generator showing how the synthetic data was created |
 
-### Structure of `structures.json`
+### Structure of `structures_measurements.json`
 
-Each entry looks like this:
+Each structure contains:
 
-```json
-{
-  "structure_id": 7,
-  "n_storeys": 5,
-  "damaged": 1,
-  "damage_storey": 2,
-  "edges": [[0,1],[1,2],[2,3],[3,4]],
-  "feature_names": ["mass_kg", "stiffness_Nm", "height_m", "nat_freq_Hz", "mac"],
-  "node_features": [
-    {"storey": 0, "mass_kg": 1821.4, "stiffness_Nm": 1103452.1, "height_m": 3.91, "nat_freq_Hz": 2.341, "mac": 0.9981},
-    {"storey": 1, "mass_kg": 2104.7, "stiffness_Nm": 1244810.3, "height_m": 4.12, "nat_freq_Hz": 5.871, "mac": 0.9903}
-  ]
-}
-```
+- `structure_id`
+- `n_storeys`
+- `edges`
+- `node_features`
+- `feature_names`
 
-### Node features
+Each node currently includes:
 
-| Feature | Description |
-|---|---|
-| `mass_kg` | Storey mass [kg] |
-| `stiffness_Nm` | Inter-storey stiffness [N/m] — reduced at the damaged storey |
-| `height_m` | Storey height [m] |
-| `nat_freq_Hz` | Natural frequency of the dominant mode for this storey [Hz] (with sensor noise) |
-| `mac` | MAC value of that mode vs. the undamaged reference [-] |
+- `storey`
+- `height_m`
+- `dominant_modal_frequency_Hz`
 
-### Loading the data
+These are intended as lightweight, measurement-like features for a toy exercise. You may derive additional node, edge, or graph features from them if helpful.
 
-```python
-# Python
-import json, pandas as pd
-structures = json.load(open("structures.json"))
-pop_edges  = pd.read_csv("population_edges.csv")
-```
+### Labels
 
-```matlab
-% MATLAB
-structures = jsondecode(fileread("structures.json"));
-pop_edges  = readtable("population_edges.csv");
-```
+`structure_labels.csv` contains:
 
-```r
-# R
-library(jsonlite)
-structures <- fromJSON("structures.json")
-pop_edges  <- read.csv("population_edges.csv")
-```
+- `structure_id`
+- `damaged` as a binary structure-level label
+- `damage_storey` as the true damaged location for optional localization analysis
 
----
+The structure-level label is the main supervision target. The storey-level target is included so that stronger candidates can explore approximate localization or node/edge damage indicators.
 
 ## Tasks
 
-### Task 1 — Explore the population
+### Task 1 - Explore the population
 
-Characterise the dataset. Visualise the population graph, the distribution of physical and modal features, and the variation in structure geometry across the population.
+Characterize the dataset and explain the variation across the population.
 
-Comment on which features carry the most damage information and justify any preprocessing choices. Note that structures have different numbers of nodes — how does this affect how you represent or compare them?
+- Visualize the distribution of structure sizes and geometry
+- Explore the starter population graph
+- Inspect the provided measurement-like node features
+- Propose which raw or derived features might be damage-sensitive
 
-> We are looking for physical intuition, not just plots.
+We are looking for physical intuition and clear coding, not just plots.
 
----
+### Task 2 - Simple structure-level baseline
 
-### Task 2 — Single-structure surrogate (baseline)
+Build a simple baseline for **damage detection** using fixed-length summaries of each structure.
 
-Build a surrogate model that predicts damage for each structure using **only that structure's own features** — no population information. Choose your model and justify the choice, bearing in mind that structures have variable size.
+Examples include:
 
-Report appropriate classification metrics (accuracy, F1, ROC-AUC) using cross-validation. This is your **non-population baseline**.
+- logistic regression
+- random forest
+- support vector machine
+- a small MLP
 
-> Architecture is your decision. What matters is the reasoning behind it and how you handle variable-length inputs.
+Because structures have different numbers of nodes, you will need to design a sensible summary representation.
 
----
+Report appropriate metrics such as accuracy, F1, and ROC-AUC using cross-validation.
 
-### Task 3 — Population-level damage detection with a GNN ⬅ required
+### Task 3 - Unsupervised or anomaly-based baseline
 
-Implement a **Graph Neural Network** that exploits both the internal structure graph of each member and the population-level similarity graph to perform **graph-level binary classification** (damaged / healthy per structure). The provided population edges are a starting point — you may modify or replace them.
+Implement at least one simpler exploratory method that does not rely on a graph neural network.
 
-- Train and evaluate using the same protocol as Task 2 so results are directly comparable
-- Visualise the learned graph-level embeddings and comment on what the GNN has encoded
-- Discuss: what does message passing represent physically in the context of a heterogeneous PBSHM population?
+Examples include:
 
-> This is the only task where the model type is prescribed. Library, architecture, and pooling strategy are your choice.
+- clustering on structure-level summaries
+- PCA or other embedding plus visual separation
+- nearest-neighbor anomaly scoring
+- isolation forest or another anomaly detector
 
----
+Discuss whether damaged structures appear separable and what the limitations of these simpler methods are.
 
-### Task 4 — Transferability to unseen structures
+### Task 4 - Graph-based extension
 
-Design and implement a scenario where **5 structures are withheld entirely during training** and must be classified at test time by connecting them to the population.
+Implement a graph-based model that uses the **within-structure graph** and compare it to your simpler baselines.
 
-- How do you decide which population edges to assign to the new structures?
-- Compare performance to your Task 2 baseline — does the population help?
-- What are the failure modes? Under what conditions would the population graph mislead rather than help, particularly given geometric heterogeneity?
+You may:
 
-> We are particularly interested in the critical reflection, not just the accuracy number.
+- perform graph-level damage detection
+- estimate node- or edge-level damage indicators
+- or do both
 
----
+If you choose a GNN, a sensible pattern is:
 
-### Task 5 — Population graph construction *(extension, if time permits)*
+1. encode each structure graph
+2. pool node information into a structure representation for detection
+3. inspect node embeddings or scores for approximate localization
 
-The provided edges are one possible population graph, built from summary statistics. Propose and implement an alternative edge construction strategy. Analyse how the graph topology affects GNN performance and what this implies for practical PBSHM — particularly when the population contains very heterogeneous members.
+The emphasis is on whether the graph formulation is well-motivated and interpretable.
 
-> Quality of argument over quantity of experiments.
+### Task 5 - Population-level graph extension (recommended for stronger candidates)
 
----
+Use the population graph to explore transfer across structures.
+
+- Start from the provided geometry-based population graph or build your own
+- Test whether population information helps with detection on unseen structures
+- Reflect on when population message passing helps and when it may mislead
+
+You do not need to complete this task fully to produce a strong submission.
 
 ## Deliverables
 
-1. **Your code** in whatever format suits your tool (notebook, `.m` scripts, `.py` files, etc.) — it must be runnable
-2. **3–5 slide deck** (PDF or PowerPoint) for the 10-minute presentation
-3. **A brief README** in your repo: how to run your code, key design decisions, known limitations
+1. Runnable code in your preferred language
+2. A short `README` explaining how to run the work and key design decisions
+3. A short slide deck for a 10-minute presentation
 
-> Clarity of reasoning matters more than accuracy. Comment your code — you will be asked to explain every line in the presentation.
+## What We Are Assessing
 
----
+We care about:
 
-## Marking rubric
+- clear and reproducible code
+- sensible handling of variable-size graphs
+- ability to build and justify simple baselines
+- whether graph methods are used thoughtfully rather than by default
+- physical interpretation of the results
+
+Clarity of reasoning matters more than headline accuracy.
+
+## Suggested Marking Rubric
 
 | Criterion | Points |
 |---|---|
-| Code correctness & reproducibility | 20 |
-| Justification of surrogate choice and handling of variable geometry | 20 |
-| Understanding of GNN mechanics and physical interpretation | 25 |
-| Transfer scenario — design quality and critical analysis | 20 |
-| Presentation clarity & depth in Q&A | 15 |
+| Code correctness and reproducibility | 20 |
+| Exploratory analysis and feature reasoning | 20 |
+| Quality of simple baselines | 20 |
+| Graph-based modeling and interpretation | 25 |
+| Communication and presentation clarity | 15 |
 | **Total** | **100** |
-
----
-
-## 10-minute presentation structure
-
-| Time | Content |
-|---|---|
-| 0 – 2 min | Why PBSHM? Why a graph? Frame the problem in your own words |
-| 2 – 4 min | Your surrogate choice and GNN design — what you chose and why |
-| 4 – 7 min | Results — baseline vs. GNN vs. transfer, with physical interpretation |
-| 7 – 10 min | Limitations, open questions, what you would explore with more time |
-
-> Slides covering results and the transfer scenario are the most revealing. We want to see whether you connect numerical results to physical SHM intuition — not just report metrics.
-
----
 
 ## Rules
 
 - Any open-source library or toolbox is permitted
 - Internet access for documentation is permitted
-- You may use AI coding assistants, but **be prepared to explain every line in your presentation**
+- You may use AI coding assistants, but be prepared to explain every line you submit
 - Collaboration with other candidates is not permitted
-- Submit by emailing your GitHub repo link before the agreed deadline; repos must remain accessible for review
 
----
+## Notes
 
-*Questions about the data or setup? Contact the group before starting.*
+- The provided population graph is a **starter graph** based on geometry-only summaries. You are free to modify or replace it.
+- The generation script is included for transparency, but your inference pipeline should rely on the provided candidate-facing inputs.
+- This is a toy exercise. A clean and well-argued small solution is better than an overly ambitious one.
