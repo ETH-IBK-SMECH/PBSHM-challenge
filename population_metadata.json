@@ -10,6 +10,8 @@
     "If a structure has fewer than 6 DOFs, all available modes are saved.",
     "frequencies_Hz contains one noisy natural frequency per saved mode.",
     "mode_shapes_rows_storeys_cols_modes contains the noisy mode shape matrix with rows=storeys and columns=saved modes.",
+    "Exact mode shapes are first normalized so each mode has max component 1.",
+    "Then bounded additive noise with magnitude at most 2% is added entrywise, followed by renormalization.",
     "Storey heights are stored separately under geometry.",
     "Mass varies by floor and by structure in this version.",
     "Healthy and damaged stiffness bands do not overlap in the latent generator."
@@ -31,6 +33,7 @@
     5.0
   ],
   "max_saved_modes": 6,
+  "mode_shape_noise_max_frac": 0.02,
   "mode_shape_storage": {
     "orientation": "rows_storeys_cols_modes"
   }

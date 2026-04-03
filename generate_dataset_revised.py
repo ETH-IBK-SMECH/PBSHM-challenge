@@ -26,7 +26,7 @@ HEIGHT_MIN = 3.0
 HEIGHT_MAX = 5.0
 
 FREQ_NOISE_DB = -24.0
-MODE_SHAPE_NOISE_STD = 0.03
+MODE_SHAPE_NOISE_MAX_FRAC = 0.02  # max 2% additive noise after normalization
 
 
 def shear_stiffness_matrix(k: np.ndarray) -> np.ndarray:
@@ -39,6 +39,21 @@ def shear_stiffness_matrix(k: np.ndarray) -> np.ndarray:
             K[i, i - 1] -= k[i]
             K[i - 1, i] -= k[i]
     return K
+
+
+def normalize_mode_columns(vecs: np.ndarray) -> np.ndarray:
+    out = vecs.copy()
+    for m in range(out.shape[1]):
+        col = out[:, m]
+        # fix sign for consistency: largest-magnitude entry positive
+        idx = int(np.argmax(np.abs(col)))
+        if col[idx] < 0:
+            col = -col
+        max_abs = np.max(np.abs(col))
+        if max_abs > 0:
+            col = col / max_abs
+        out[:, m] = col
+    return out
 
 
 def main() -> None:
@@ -82,12 +97,16 @@ def main() -> None:
         nat_freqs_hz = np.sqrt(vals) / (2.0 * np.pi)
 
         nat_freqs_noisy = nat_freqs_hz + rng.normal(0.0, freq_noise_scale_factor * nat_freqs_hz, ndof)
-        vecs_noisy = vecs + rng.normal(0.0, MODE_SHAPE_NOISE_STD, vecs.shape)
 
-        for m in range(vecs_noisy.shape[1]):
-            max_abs = np.max(np.abs(vecs_noisy[:, m]))
-            if max_abs > 0:
-                vecs_noisy[:, m] = vecs_noisy[:, m] / max_abs
+        # normalize exact modes first to max component 1
+        vecs_norm = normalize_mode_columns(vecs)
+
+        # add bounded small noise (max ±2% of normalized scale) entrywise
+        noise = rng.uniform(-MODE_SHAPE_NOISE_MAX_FRAC, MODE_SHAPE_NOISE_MAX_FRAC, size=vecs_norm.shape)
+        vecs_noisy = vecs_norm + noise
+
+        # renormalize again so each noisy mode shape has max component exactly 1
+        vecs_noisy = normalize_mode_columns(vecs_noisy)
 
         n_saved_modes = min(ndof, MAX_SAVED_MODES)
         saved_mode_indices = list(range(n_saved_modes))
@@ -132,6 +151,7 @@ def main() -> None:
             "min_mass": float(np.min(masses)),
             "max_mass": float(np.max(masses)),
             "n_modes_saved": int(n_saved_modes),
+            "mode_shape_noise_max_frac": MODE_SHAPE_NOISE_MAX_FRAC,
         })
 
     with open(out_dir / "structures_measurements.json", "w", encoding="utf-8") as f:
@@ -152,6 +172,8 @@ def main() -> None:
             "If a structure has fewer than 6 DOFs, all available modes are saved.",
             "frequencies_Hz contains one noisy natural frequency per saved mode.",
             "mode_shapes_rows_storeys_cols_modes contains the noisy mode shape matrix with rows=storeys and columns=saved modes.",
+            "Exact mode shapes are first normalized so each mode has max component 1.",
+            "Then bounded additive noise with magnitude at most 2% is added entrywise, followed by renormalization.",
             "Storey heights are stored separately under geometry.",
             "Mass varies by floor and by structure in this version.",
             "Healthy and damaged stiffness bands do not overlap in the latent generator."
@@ -161,16 +183,13 @@ def main() -> None:
         "mass_range_kg": [MASS_MIN, MASS_MAX],
         "height_range_m": [HEIGHT_MIN, HEIGHT_MAX],
         "max_saved_modes": MAX_SAVED_MODES,
+        "mode_shape_noise_max_frac": MODE_SHAPE_NOISE_MAX_FRAC,
         "mode_shape_storage": {"orientation": "rows_storeys_cols_modes"},
     }
     with open(out_dir / "population_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2)
 
-    print("Wrote:")
-    print(out_dir / "structures_measurements.json")
-    print(out_dir / "structure_labels.csv")
-    print(out_dir / "latent_generation_diagnostics.csv")
-    print(out_dir / "population_metadata.json")
+    print("Wrote dataset with normalized mode shapes and max 2% noise.")
 
 
 if __name__ == "__main__":

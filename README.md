@@ -191,7 +191,26 @@ For each structure, the dataset saves **the first up to 6 modes**:
 
 Frequencies are global modal quantities, while mode shapes are vectors over the storeys for each mode.
 
+
 ### Current generator assumptions
 - random mass per floor and per structure
 - healthy and damaged stiffness bands do not overlap
 - no precomputed population graph is provided
+- exact mode shapes are first normalized so each mode has maximum absolute component equal to 1
+- bounded additive mode-shape noise of at most 2% is added entrywise, followed by renormalization
+
+
+## Suggested approach (open-ended)
+
+The dataset provides modal quantities per structure (frequencies and mode shapes), along with the structural geometry.
+
+You are free to construct your own representation of the data and define features that you consider informative for the task.
+
+You may use:
+- the provided modal data directly
+- combinations or transformations of the available quantities
+- any modeling or learning approach of your choice
+
+There is no prescribed feature representation or method. We are primarily interested in your reasoning, assumptions, and how you choose to extract and use information from the data.
+
+You are encouraged to think critically about how the provided quantities relate to structural behavior.
