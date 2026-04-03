@@ -1,50 +1,35 @@
-"""
-generate_dataset_revised.py
-===========================
-
-Revised PBSHM toy dataset with variable-size structures and measurement-like exports.
-
-Design goals:
-- keep the simulation model transparent
-- avoid exporting direct shortcut features such as post-damage stiffness or MAC
-- support simple baselines first, with graph methods as a natural extension
-
-Simulation model
-----------------
-Each structure is an N-DOF lumped-mass shear frame with 4-8 storeys.
-Damage is simulated as a localized reduction in one inter-storey stiffness.
-Modal quantities are computed from the generalized eigenproblem and then
-perturbed with light noise to emulate imperfect measurements.
-
-Candidate-facing exports
-------------------------
-The exported measurement file contains:
-- storey-level measurement-like features
-
-Latent physical parameters such as the true damaged stiffness values are used
-internally to generate the synthetic data but are not exported as candidate
-inputs for inference.
-"""
-
 import json
-import os
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from scipy.linalg import eigh
 
+
 SEED = 42
-N = 50
+N_HEALTHY = 100
+N_DAMAGED = 100
+N_STRUCTURES = N_HEALTHY + N_DAMAGED
 MIN_DOF = 4
 MAX_DOF = 8
-DAMAGE_FRAC = 0.30
-OUT_DIR = "pbshm_dataset_revised"
+MAX_SAVED_MODES = 6
 
-rng = np.random.default_rng(SEED)
-os.makedirs(OUT_DIR, exist_ok=True)
+HEALTHY_STIFFNESS_MIN = 1.0e6
+HEALTHY_STIFFNESS_MAX = 1.4e6
+DAMAGED_STIFFNESS_MIN = 0.45e6
+DAMAGED_STIFFNESS_MAX = 0.75e6
+
+MASS_MIN = 1500.0
+MASS_MAX = 2500.0
+
+HEIGHT_MIN = 3.0
+HEIGHT_MAX = 5.0
+
+FREQ_NOISE_DB = -24.0
+MODE_SHAPE_NOISE_STD = 0.03
 
 
-def shear_stiffness_matrix(k):
+def shear_stiffness_matrix(k: np.ndarray) -> np.ndarray:
     n = len(k)
     K = np.zeros((n, n))
     for i in range(n):
@@ -56,103 +41,137 @@ def shear_stiffness_matrix(k):
     return K
 
 
-damage_idx = set(rng.choice(N, size=int(N * DAMAGE_FRAC), replace=False).tolist())
-damage_severity = rng.uniform(0.15, 0.40, N)
-damage_storey = rng.integers(0, MAX_DOF, N)
+def main() -> None:
+    out_dir = Path(__file__).resolve().parent
+    rng = np.random.default_rng(SEED)
 
-structures = []
-labels = []
+    all_ids = np.arange(N_STRUCTURES)
+    damaged_ids = set(rng.choice(all_ids, size=N_DAMAGED, replace=False).tolist())
 
-for i in range(N):
-    ndof = int(rng.integers(MIN_DOF, MAX_DOF + 1))
+    damage_severity_trace = rng.uniform(0.15, 0.40, N_STRUCTURES)
+    damage_storey = rng.integers(0, MAX_DOF, N_STRUCTURES)
 
-    masses = rng.uniform(1500, 2500, ndof)
-    stiffs = rng.uniform(0.8e6, 1.4e6, ndof)
-    heights = rng.uniform(3.0, 5.0, ndof)
+    structures = []
+    labels = []
+    diagnostics = []
 
-    is_damaged = int(i in damage_idx)
-    stiffs_phys = stiffs.copy()
-    dmg_loc = int(damage_storey[i]) % ndof
-    if is_damaged:
-        stiffs_phys[dmg_loc] *= (1.0 - damage_severity[i])
+    freq_noise_scale_factor = 10 ** (FREQ_NOISE_DB / 20.0)
 
-    M = np.diag(masses)
-    K = shear_stiffness_matrix(stiffs_phys)
-    vals, vecs = eigh(K, M)
-    nat_freqs = np.sqrt(np.abs(vals)) / (2 * np.pi)
+    for i in range(N_STRUCTURES):
+        ndof = int(rng.integers(MIN_DOF, MAX_DOF + 1))
 
-    freq_noise_scale = 10 ** (-24 / 20)
-    nat_freqs_noisy = nat_freqs + rng.normal(0, freq_noise_scale * nat_freqs, ndof)
+        masses = rng.uniform(MASS_MIN, MASS_MAX, ndof)
+        stiffs_healthy = rng.uniform(HEALTHY_STIFFNESS_MIN, HEALTHY_STIFFNESS_MAX, ndof)
+        heights = rng.uniform(HEIGHT_MIN, HEIGHT_MAX, ndof)
 
-    shape_noise_scale = 0.03
-    vecs_noisy = vecs + rng.normal(0, shape_noise_scale, vecs.shape)
-    dominant_mode = np.argmax(np.abs(vecs_noisy), axis=1)
+        is_damaged = int(i in damaged_ids)
+        dmg_loc = int(damage_storey[i]) % ndof
 
-    node_features = []
-    for j in range(ndof):
-        m_j = int(dominant_mode[j])
-        node_features.append({
-            "storey": j,
-            "height_m": round(float(heights[j]), 3),
-            "dominant_modal_frequency_Hz": round(float(nat_freqs_noisy[m_j]), 5),
+        stiffs_physical = stiffs_healthy.copy()
+        actual_damage_severity = 0.0
+        if is_damaged:
+            damaged_value = float(rng.uniform(DAMAGED_STIFFNESS_MIN, DAMAGED_STIFFNESS_MAX))
+            actual_damage_severity = 1.0 - damaged_value / stiffs_healthy[dmg_loc]
+            stiffs_physical[dmg_loc] = damaged_value
+
+        M = np.diag(masses)
+        K = shear_stiffness_matrix(stiffs_physical)
+
+        vals, vecs = eigh(K, M)
+        vals = np.abs(vals)
+        nat_freqs_hz = np.sqrt(vals) / (2.0 * np.pi)
+
+        nat_freqs_noisy = nat_freqs_hz + rng.normal(0.0, freq_noise_scale_factor * nat_freqs_hz, ndof)
+        vecs_noisy = vecs + rng.normal(0.0, MODE_SHAPE_NOISE_STD, vecs.shape)
+
+        for m in range(vecs_noisy.shape[1]):
+            max_abs = np.max(np.abs(vecs_noisy[:, m]))
+            if max_abs > 0:
+                vecs_noisy[:, m] = vecs_noisy[:, m] / max_abs
+
+        n_saved_modes = min(ndof, MAX_SAVED_MODES)
+        saved_mode_indices = list(range(n_saved_modes))
+
+        edges = [[j, j + 1] for j in range(ndof - 1)]
+
+        structures.append({
+            "structure_id": int(i),
+            "n_storeys": int(ndof),
+            "edges": edges,
+            "geometry": {
+                "storey_heights_m": [float(x) for x in heights.tolist()],
+                "cumulative_heights_m": [float(x) for x in np.cumsum(heights).tolist()],
+            },
+            "modal_data": {
+                "n_modes_available": int(ndof),
+                "n_modes_saved": int(n_saved_modes),
+                "mode_indices": [int(m + 1) for m in saved_mode_indices],
+                "frequencies_Hz": [float(x) for x in nat_freqs_noisy[saved_mode_indices].tolist()],
+                "mode_shapes_rows_storeys_cols_modes": [
+                    [float(v) for v in row] for row in vecs_noisy[:, saved_mode_indices].tolist()
+                ],
+            },
         })
 
-    structures.append({
-        "structure_id": i,
-        "n_storeys": ndof,
-        "feature_names": [
-            "height_m",
-            "dominant_modal_frequency_Hz",
+        labels.append({
+            "structure_id": int(i),
+            "damaged": int(is_damaged),
+            "damage_storey": int(dmg_loc) if is_damaged else -1,
+        })
+
+        diagnostics.append({
+            "structure_id": int(i),
+            "n_storeys": int(ndof),
+            "damaged": int(is_damaged),
+            "damage_storey": int(dmg_loc) if is_damaged else -1,
+            "assigned_damage_severity_from_old_scheme": float(damage_severity_trace[i]) if is_damaged else 0.0,
+            "actual_damage_severity_vs_local_healthy": float(actual_damage_severity) if is_damaged else 0.0,
+            "min_healthy_stiffness": float(np.min(stiffs_healthy)),
+            "max_healthy_stiffness": float(np.max(stiffs_healthy)),
+            "damaged_stiffness_value": float(stiffs_physical[dmg_loc]) if is_damaged else np.nan,
+            "min_mass": float(np.min(masses)),
+            "max_mass": float(np.max(masses)),
+            "n_modes_saved": int(n_saved_modes),
+        })
+
+    with open(out_dir / "structures_measurements.json", "w", encoding="utf-8") as f:
+        json.dump(structures, f, indent=2)
+
+    pd.DataFrame(labels).to_csv(out_dir / "structure_labels.csv", index=False)
+    pd.DataFrame(diagnostics).to_csv(out_dir / "latent_generation_diagnostics.csv", index=False)
+
+    metadata = {
+        "seed": SEED,
+        "n_structures": N_STRUCTURES,
+        "n_healthy": N_HEALTHY,
+        "n_damaged": N_DAMAGED,
+        "representation": "per_structure_modal_data_limited_to_first_modes",
+        "notes": [
+            "Modal quantities are stored per structure and per mode.",
+            "Only the first up to 6 modes are saved for each structure.",
+            "If a structure has fewer than 6 DOFs, all available modes are saved.",
+            "frequencies_Hz contains one noisy natural frequency per saved mode.",
+            "mode_shapes_rows_storeys_cols_modes contains the noisy mode shape matrix with rows=storeys and columns=saved modes.",
+            "Storey heights are stored separately under geometry.",
+            "Mass varies by floor and by structure in this version.",
+            "Healthy and damaged stiffness bands do not overlap in the latent generator."
         ],
-        "node_features": node_features,
-    })
+        "healthy_stiffness_range_N_per_m": [HEALTHY_STIFFNESS_MIN, HEALTHY_STIFFNESS_MAX],
+        "damaged_stiffness_range_N_per_m": [DAMAGED_STIFFNESS_MIN, DAMAGED_STIFFNESS_MAX],
+        "mass_range_kg": [MASS_MIN, MASS_MAX],
+        "height_range_m": [HEIGHT_MIN, HEIGHT_MAX],
+        "max_saved_modes": MAX_SAVED_MODES,
+        "mode_shape_storage": {"orientation": "rows_storeys_cols_modes"},
+    }
+    with open(out_dir / "population_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2)
 
-    labels.append({
-        "structure_id": i,
-        "damaged": is_damaged,
-        "damage_storey": dmg_loc if is_damaged else None,
-    })
+    print("Wrote:")
+    print(out_dir / "structures_measurements.json")
+    print(out_dir / "structure_labels.csv")
+    print(out_dir / "latent_generation_diagnostics.csv")
+    print(out_dir / "population_metadata.json")
 
-with open(f"{OUT_DIR}/structures_measurements.json", "w", encoding="utf-8") as f:
-    json.dump(structures, f, indent=2)
 
-labels_df = pd.DataFrame(labels)
-labels_df["damage_storey"] = pd.array(labels_df["damage_storey"], dtype="Int64")
-labels_df.to_csv(f"{OUT_DIR}/structure_labels.csv", index=False)
-
-meta = {
-    "description": (
-        "Population of 50 shear-frame structures with 4-8 storeys. "
-        "The candidate-facing data exposes lightweight "
-        "measurement-like modal features, while latent simulator parameters "
-        "remain hidden. Candidates are expected to build the graph for each structure "
-        "themselves from the storey-level information."
-    ),
-    "n_structures": N,
-    "n_damaged": int(sum(row["damaged"] for row in labels)),
-    "n_healthy": int(N - sum(row["damaged"] for row in labels)),
-    "storey_range": [MIN_DOF, MAX_DOF],
-    "random_seed": SEED,
-    "candidate_input_files": {
-        "structures_measurements.json": "Storey-level measurement-like features.",
-        "structure_labels.csv": "Structure-level label and true damage location for evaluation.",
-    },
-    "node_feature_descriptions": {
-        "height_m": "Storey height [m].",
-        "dominant_modal_frequency_Hz": (
-            "Noisy dominant modal frequency assigned to the storey via the "
-            "largest noisy mode-shape amplitude."
-        ),
-    },
-    "hidden_generation_notes": [
-        "Each structure is generated from random masses and inter-storey stiffnesses.",
-        "Damage is simulated as a local stiffness reduction in one storey.",
-        "True damaged stiffness values are not exported as inference inputs.",
-        "Mode shapes are perturbed before assigning a dominant modal frequency to each storey.",
-    ],
-}
-
-with open(f"{OUT_DIR}/population_metadata.json", "w", encoding="utf-8") as f:
-    json.dump(meta, f, indent=2)
-
-print("Revised dataset generated.")
+if __name__ == "__main__":
+    main()

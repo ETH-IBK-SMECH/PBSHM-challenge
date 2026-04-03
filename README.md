@@ -46,7 +46,7 @@ Each node currently includes:
 
 - `storey`
 - `height_m`
-- `dominant_modal_frequency_Hz`
+- `modal_data (frequencies_Hz + mode_shapes_rows_storeys_cols_modes)`
 
 These are intended as lightweight, measurement-like features for a toy exercise. You may derive additional node, edge, or graph features from them if helpful.
 
@@ -159,3 +159,39 @@ Clarity of reasoning matters more than headline accuracy.
 - Please construct the graph representation for each individual structure yourself from the provided storey-level information.
 - The generation script is included for transparency, but your inference pipeline should rely on the provided candidate-facing inputs.
 - This is a toy exercise. A clean and well-argued small solution is better than an overly ambitious one.
+
+
+
+## Updated dataset specification
+
+This version of the dataset contains **200 structures total**:
+- **100 healthy**
+- **100 damaged**
+
+For each structure, the dataset stores modal quantities **per mode** rather than node-level dominant frequencies.
+
+Each entry in `structures_measurements.json` contains:
+- `geometry.storey_heights_m`
+- `geometry.cumulative_heights_m`
+- `modal_data.n_modes_available`
+- `modal_data.n_modes_saved`
+- `modal_data.mode_indices`
+- `modal_data.frequencies_Hz`
+- `modal_data.mode_shapes_rows_storeys_cols_modes`
+
+### Modal storage rule
+For each structure, the dataset saves **the first up to 6 modes**:
+- if the structure has **6 or more DOFs**, only the **first 6 frequencies and corresponding mode shapes** are stored
+- if the structure has **fewer than 6 DOFs**, all available modes are stored
+
+### Orientation
+`mode_shapes_rows_storeys_cols_modes` is stored as:
+- **rows = storeys**
+- **columns = saved modes**
+
+Frequencies are global modal quantities, while mode shapes are vectors over the storeys for each mode.
+
+### Current generator assumptions
+- random mass per floor and per structure
+- healthy and damaged stiffness bands do not overlap
+- no precomputed population graph is provided

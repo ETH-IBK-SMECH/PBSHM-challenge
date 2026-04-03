@@ -1,25 +1,37 @@
 {
-  "description": "Population of 50 shear-frame structures with 4-8 storeys. The candidate-facing data exposes lightweight measurement-like modal features, while latent simulator parameters remain hidden. Candidates are expected to build the graph for each structure themselves from the storey-level information.",
-  "n_structures": 50,
-  "n_damaged": 15,
-  "n_healthy": 35,
-  "storey_range": [
-    4,
-    8
+  "seed": 42,
+  "n_structures": 200,
+  "n_healthy": 100,
+  "n_damaged": 100,
+  "representation": "per_structure_modal_data_limited_to_first_modes",
+  "notes": [
+    "Modal quantities are stored per structure and per mode.",
+    "Only the first up to 6 modes are saved for each structure.",
+    "If a structure has fewer than 6 DOFs, all available modes are saved.",
+    "frequencies_Hz contains one noisy natural frequency per saved mode.",
+    "mode_shapes_rows_storeys_cols_modes contains the noisy mode shape matrix with rows=storeys and columns=saved modes.",
+    "Storey heights are stored separately under geometry.",
+    "Mass varies by floor and by structure in this version.",
+    "Healthy and damaged stiffness bands do not overlap in the latent generator."
   ],
-  "random_seed": 42,
-  "candidate_input_files": {
-    "structures_measurements.json": "Topology and node-level measurement-like features.",
-    "structure_labels.csv": "Structure-level label and true damage location for evaluation."
-  },
-  "node_feature_descriptions": {
-    "height_m": "Storey height [m].",
-    "dominant_modal_frequency_Hz": "Noisy dominant modal frequency assigned to the storey via the largest noisy mode-shape amplitude."
-  },
-  "hidden_generation_notes": [
-    "Each structure is generated from random masses and inter-storey stiffnesses.",
-    "Damage is simulated as a local stiffness reduction in one storey.",
-    "True damaged stiffness values are not exported as inference inputs.",
-    "Mode shapes are perturbed before assigning a dominant modal frequency to each storey."
-  ]
+  "healthy_stiffness_range_N_per_m": [
+    1000000.0,
+    1400000.0
+  ],
+  "damaged_stiffness_range_N_per_m": [
+    450000.0,
+    750000.0
+  ],
+  "mass_range_kg": [
+    1500.0,
+    2500.0
+  ],
+  "height_range_m": [
+    3.0,
+    5.0
+  ],
+  "max_saved_modes": 6,
+  "mode_shape_storage": {
+    "orientation": "rows_storeys_cols_modes"
+  }
 }
