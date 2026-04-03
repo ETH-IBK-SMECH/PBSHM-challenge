@@ -1,0 +1,25 @@
+{
+  "description": "Population of 50 shear-frame structures with 4-8 storeys. The candidate-facing data exposes lightweight measurement-like modal features, while latent simulator parameters remain hidden. Candidates are expected to build the graph for each structure themselves from the storey-level information.",
+  "n_structures": 50,
+  "n_damaged": 15,
+  "n_healthy": 35,
+  "storey_range": [
+    4,
+    8
+  ],
+  "random_seed": 42,
+  "candidate_input_files": {
+    "structures_measurements.json": "Topology and node-level measurement-like features.",
+    "structure_labels.csv": "Structure-level label and true damage location for evaluation."
+  },
+  "node_feature_descriptions": {
+    "height_m": "Storey height [m].",
+    "dominant_modal_frequency_Hz": "Noisy dominant modal frequency assigned to the storey via the largest noisy mode-shape amplitude."
+  },
+  "hidden_generation_notes": [
+    "Each structure is generated from random masses and inter-storey stiffnesses.",
+    "Damage is simulated as a local stiffness reduction in one storey.",
+    "True damaged stiffness values are not exported as inference inputs.",
+    "Mode shapes are perturbed before assigning a dominant modal frequency to each storey."
+  ]
+}

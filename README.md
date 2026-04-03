@@ -12,7 +12,7 @@ You will work with a simulated population of 50 shear-frame structures with a **
 
 The dataset was generated from an `N`-DOF lumped-mass shear-frame model with localized stiffness reduction used to simulate damage. We provide the generation script so the physical assumptions are transparent.
 
-However, for the purposes of this exercise, assume that in deployment you **do not directly know the true damaged stiffness values or other hidden simulator state**. Your method should be built from the provided measurement-like quantities, graph structure, and labels.
+However, for the purposes of this exercise, assume that in deployment you **do not directly know the true damaged stiffness values or other hidden simulator state**. Your method should be built from the provided measurement-like quantities and labels. You should construct the within-structure graph representation yourself from the storey-level information.
 
 In other words:
 
@@ -28,10 +28,8 @@ The dataset files are located in this repository.
 
 | File | Description |
 |---|---|
-| `structures_measurements.json` | Candidate-facing inputs: one entry per structure with graph topology and measurement-like node features |
+| `structures_measurements.json` | Candidate-facing inputs: one entry per structure with storey-level measurement-like node features |
 | `structure_labels.csv` | Structure-level detection label and true damaged storey for evaluation / optional localization analysis |
-| `population_edges_geometry.csv` | Starter population graph built from geometry-only summaries |
-| `population_edge_weights_geometry.csv` | Same edges with cosine similarity weights |
 | `population_metadata.json` | Dataset summary and field descriptions |
 | `generate_dataset_revised.py` | Reference generator showing how the synthetic data was created |
 
@@ -41,7 +39,6 @@ Each structure contains:
 
 - `structure_id`
 - `n_storeys`
-- `edges`
 - `node_features`
 - `feature_names`
 
@@ -70,7 +67,6 @@ The structure-level label is the main supervision target. The storey-level targe
 Characterize the dataset and explain the variation across the population.
 
 - Visualize the distribution of structure sizes and geometry
-- Explore the starter population graph
 - Inspect the provided measurement-like node features
 - Propose which raw or derived features might be damage-sensitive
 
@@ -106,7 +102,7 @@ Discuss whether damaged structures appear separable and what the limitations of 
 
 ### Task 4 - Graph-based extension
 
-Implement a graph-based model that uses the **within-structure graph** and compare it to your simpler baselines.
+Construct a graph representation for each structure using the provided storey-level information, then implement a graph-based model and compare it to your simpler baselines.
 
 You may:
 
@@ -122,16 +118,6 @@ If you choose a GNN, a sensible pattern is:
 
 The emphasis is on whether the graph formulation is well-motivated and interpretable.
 
-### Task 5 - Population-level graph extension 
-
-Use the population graph to explore transfer across structures.
-
-- Build your own graphs
-- Test whether population information helps with detection on unseen structures
-- Reflect on when population message passing helps and when it may mislead
-
-You do not need to complete this task fully to produce a strong submission.
-
 ## Deliverables
 
 1. Runnable code in your preferred language
@@ -143,7 +129,7 @@ You do not need to complete this task fully to produce a strong submission.
 We care about:
 
 - clear and reproducible code
-- sensible handling of variable-size graphs
+- sensible handling of variable-size structures and their graph representations
 - ability to build and justify simple baselines
 - whether graph methods are used thoughtfully rather than by default
 - physical interpretation of the results
@@ -170,6 +156,6 @@ Clarity of reasoning matters more than headline accuracy.
 
 ## Notes
 
-- The provided population graph is a **starter graph** based on geometry-only summaries. You are free to modify or replace it.
+- Please construct the graph representation for each individual structure yourself from the provided storey-level information.
 - The generation script is included for transparency, but your inference pipeline should rely on the provided candidate-facing inputs.
 - This is a toy exercise. A clean and well-argued small solution is better than an overly ambitious one.
