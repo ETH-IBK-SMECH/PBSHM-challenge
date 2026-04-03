@@ -126,7 +126,7 @@ The emphasis is on whether the graph formulation is well-motivated and interpret
 
 Use the population graph to explore transfer across structures.
 
-- Start from the provided geometry-based population graph or build your own
+- Build your own graphs
 - Test whether population information helps with detection on unseen structures
 - Reflect on when population message passing helps and when it may mislead
 
